@@ -19,48 +19,47 @@ use App\Http\Controllers\FacebookController;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/register', function (){ return view('register');})->name('register');
+Route::get('/addhotal',function(){
+    return view('dashboard.addhotal');
+});
 
+
+Route::get('/register', function (){ return view('register');})->name('register');
 Route::post('/register', [UserController::class, 'Register'])->name('createAccount');
+
+
+
+
+
 
 
 Route::middleware(['auth:sanctum'])->group(function () {
     // Your protected routes go here
-    Route::get('/student', [StudentController::class , 'index'])->name('student.index');
-   // Route::get('/dashboard', [DashboardController::class , 'index'])->name('dashboard.index');
-    Route::get('/student/create', [StudentController::class , 'viewcreate'])->name('student.viewcreate');
-    Route::post('/student', [StudentController::class , 'create'])->name('student.create');
-   
-    
+//     Route::get('/student', [StudentController::class , 'index'])->name('student.index');
+//    // Route::get('/dashboard', [DashboardController::class , 'index'])->name('dashboard.index');
+//     Route::get('/student/create', [StudentController::class , 'viewcreate'])->name('student.viewcreate');
+//     Route::post('/student', [StudentController::class , 'create'])->name('student.create');
 });
 
 Route::middleware(['auth', 'is_admin'])->group(function () {
     // Admin routes
     Route::get('/dashboard', [DashboardController::class , 'index'])->name('dashboard.index');
+
     // ... other admin routes
 });
-
-
-
-
-
-
 
 
 // Route::post('/login', [UserController::class, 'logout'])->name('logout');
 Route::get('/login', function (){ return view('login');})->name('login');
 Route::post('login', [UserController::class , 'login'])->name('user.login');
-
 Route::post('/logout', [UserController::class, 'testLogout'])->name('logout');
-
 Route::get('auth/google', [GoogleController::class, 'googlepage'])->name('login-google');
-
 Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
-
 Route::get('auth/facebook', [FacebookController::class, 'facebookpage'])->name('login-facebook');
 Route::get('auth/facebook/callback', [FacebookController::class, 'facebooklogin']);
 
