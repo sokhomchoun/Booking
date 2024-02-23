@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+:root{
+  --color-blue : #00728B;
+  --color-white : #f9f9f9;
+  --color-black : #313131;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+section {
+  width: 85%;
+  margin: 0 auto;
+}
+.about-province{
+  position: relative;
+}
+.heading {
+  margin-top: 7rem;
+  color: var(--color-blue);
+  font-size: 2rem;
+  /* line-height: 2rem; */
+}
+.heading > span {
+  color: var(--color-black);
+}
+.about-province .content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.slide-pictures {
+  position: relative;
+  width: 47%;
+  height: 380px;
+}
+.textBox {
+  width: 47%;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+.textBox .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.textBox .text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  word-break:keep-all;
+}
+.location {
+  font-size: 12px;
+}
+.properties-type {
+  margin-top: 2rem;
+}
