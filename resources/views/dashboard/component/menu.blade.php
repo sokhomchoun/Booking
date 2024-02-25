@@ -15,9 +15,31 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-              <a href="{{ '/addhotal' }}"><i class="bi bi-circle"></i><span>Added Hotel</span></a>
+              <a href="{{ '/addhotel' }}"><i class="bi bi-circle"></i><span>Added Hotel</span></a>
           </li>
 
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#category" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Category</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="category" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+              <a href="{{ '/addcategory' }}"><i class="bi bi-circle"></i><span>Added Category</span></a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#province" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Province</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="province" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+              <a href="{{ '/addprovince' }}"><i class="bi bi-circle"></i><span>Added Category</span></a>
+          </li>
         </ul>
       </li>
 

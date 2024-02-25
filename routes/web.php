@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
@@ -7,6 +8,8 @@ use Illuminate\Auth\Middleware\Authenticate;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\ProvinceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,21 +22,26 @@ use App\Http\Controllers\FacebookController;
 |
 */
 
+// route for view page 
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-
-Route::get('/addhotal',function(){
-    return view('dashboard.addhotal');
+Route::get('/addhotel',function(){
+    return view('dashboard.hotel.addhotel');
+});
+Route::get('/addcategory',function(){
+    return view('dashboard.category.addcategory');
+});
+Route::get('/addprovince',function(){
+    return view('dashboard.province.addprovince');
 });
 
+// end route for view page 
 
 
 Route::get('/register', function (){ return view('register');})->name('register');
 Route::post('/register', [UserController::class, 'Register'])->name('createAccount');
-
-
 
 
 
@@ -45,6 +53,15 @@ Route::middleware(['auth:sanctum'])->group(function () {
 //    // Route::get('/dashboard', [DashboardController::class , 'index'])->name('dashboard.index');
 //     Route::get('/student/create', [StudentController::class , 'viewcreate'])->name('student.viewcreate');
 //     Route::post('/student', [StudentController::class , 'create'])->name('student.create');
+    // Hotel
+    Route::post('/addhotel',[HotelController::class, 'createhotel'])->name('dashboard.hotel.addhotel');
+
+    // Category
+    Route::post('/addcategory',[CategoryController::class, 'createcategory'])->name('dashboard.category.addcategory');
+
+    // Province
+    Route::post('addprovince',[ProvinceController::class,'createprovince'])->name('dashboard.province.addprovince');
+
 });
 
 Route::middleware(['auth', 'is_admin'])->group(function () {

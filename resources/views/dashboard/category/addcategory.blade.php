@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,15 +14,15 @@
     <link rel="stylesheet" href="{{ asset('vendor/simple-datatables/style.css') }}">
     <link rel="stylesheet" href="{{asset('css/dashboard.css')}}"/>
 
-    <link rel="stylesheet" href="{{asset('css/second.css')}}"/>
 
     <link rel="stylesheet" href="{{asset('css/dashboard/second.css')}}">
+    <link rel="stylesheet" href="{{asset('css/dashboard/boostrap5.css')}}">
 
-    <title>Addedhotal</title>
+    <title>AddedCategory</title>
 </head>
 <body>
 
-           {{-- header  --}}
+    {{-- header  --}}
     @include('dashboard/component/header');
     {{-- end header  --}}
 
@@ -29,11 +30,39 @@
     @include('dashboard/component/menu');
     {{-- end menu  --}}
 
-    
-
      <main id="main" class="main">
 
-        <h1>Added Hotal</h1>
+        <h3>AddedCategory</h3>
+        @if (session('status'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{session('status')}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+
+        <form action="{{route('dashboard.category.addcategory')}}" method="POST" enctype="multipart/form-data">
+          @csrf
+          <div class="mb-3">
+            <label for="" class="form-label">Category No</label>
+            <input type="text" class="form-control" name="category_no">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Category Name</label>
+            <input type="text" class="form-control" name="category_name">
+          </div>
+
+          <div class="mb-3">
+            <label for="" class="form-label">Category Image</label>
+            <input type="file" class="form-control" placeholder="Hotel Name" name="category_image">
+          </div>
+
+          <div class="btn_hotel d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary" id="btn_save">Save</button>
+            <button type="submit" class="btn btn-primary">Cancel</button>
+          </div>
+         
+        </form>
+        
     
       </main><!-- End #main -->
     
