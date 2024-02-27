@@ -1,3 +1,37 @@
 #btn_save{
     margin-right: 15px;
+    background-color: #00728b;
+}
+.frm_input_modal{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background: white;
+    margin-top: 20px;
+}
+.icon_save{
+    margin-right: 10px;
+}
+.head_table{
+    background-color: #00728b !important;
+    color: white !important;
+}
+.header_modal{
+    background-color: #00728b;
+    color: white;
+    height: 50px;
+    padding: 15px;
+    font-size: 20px;
+}
+.category_header{
+    padding: 0px 20px 0px 20px;
+}
+.btn_hotel{
+    padding-bottom: 20px;
+}
+#add_category{
+    background-color: #00728b;
+}
+#search-button{
+    background-color: #00728b !important;  
 }

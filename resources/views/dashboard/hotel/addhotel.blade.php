@@ -43,12 +43,12 @@
         <form action="{{route('dashboard.hotel.addhotel')}}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="mb-3">
-            <label for="" class="form-label">Hotel Name</label>
+            <label for="" class="form-label">Name</label>
             <input type="text" class="form-control" name="hotel_name">
           </div>
 
           <div class="mb-3">
-            <label for="" class="form-label">Hotel Image</label>
+            <label for="" class="form-label">Image</label>
             <input type="file" class="form-control" placeholder="Hotel Name" name="image_hotel">
           </div>
           <div class="mb-3">

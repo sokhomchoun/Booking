@@ -30,49 +30,17 @@ Route::get('/', function () {
 Route::get('/addhotel',function(){
     return view('dashboard.hotel.addhotel');
 });
-Route::get('/addcategory',function(){
-    return view('dashboard.category.addcategory');
-});
+
 Route::get('/addprovince',function(){
     return view('dashboard.province.addprovince');
 });
 
 // end route for view page 
 
-
+// Register dashboard
 Route::get('/register', function (){ return view('register');})->name('register');
 Route::post('/register', [UserController::class, 'Register'])->name('createAccount');
-
-
-
-
-
-Route::middleware(['auth:sanctum'])->group(function () {
-    // Your protected routes go here
-//     Route::get('/student', [StudentController::class , 'index'])->name('student.index');
-//    // Route::get('/dashboard', [DashboardController::class , 'index'])->name('dashboard.index');
-//     Route::get('/student/create', [StudentController::class , 'viewcreate'])->name('student.viewcreate');
-//     Route::post('/student', [StudentController::class , 'create'])->name('student.create');
-    // Hotel
-    Route::post('/addhotel',[HotelController::class, 'createhotel'])->name('dashboard.hotel.addhotel');
-
-    // Category
-    Route::post('/addcategory',[CategoryController::class, 'createcategory'])->name('dashboard.category.addcategory');
-
-    // Province
-    Route::post('addprovince',[ProvinceController::class,'createprovince'])->name('dashboard.province.addprovince');
-
-});
-
-Route::middleware(['auth', 'is_admin'])->group(function () {
-    // Admin routes
-    Route::get('/dashboard', [DashboardController::class , 'index'])->name('dashboard.index');
-
-    // ... other admin routes
-});
-
-
-// Route::post('/login', [UserController::class, 'logout'])->name('logout');
+// Login dashoboard
 Route::get('/login', function (){ return view('login');})->name('login');
 Route::post('login', [UserController::class , 'login'])->name('user.login');
 Route::post('/logout', [UserController::class, 'testLogout'])->name('logout');
@@ -80,4 +48,32 @@ Route::get('auth/google', [GoogleController::class, 'googlepage'])->name('login-
 Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
 Route::get('auth/facebook', [FacebookController::class, 'facebookpage'])->name('login-facebook');
 Route::get('auth/facebook/callback', [FacebookController::class, 'facebooklogin']);
+
+
+Route::middleware(['auth:sanctum'])->group(function () {
+    // Your protected routes go here
+
+    // Hotel
+    Route::post('/addhotel',[HotelController::class, 'createhotel'])->name('dashboard.hotel.addhotel');
+
+    // Category
+    Route::get('/addcategory',[CategoryController::class,'showcategory']);
+    Route::post('/addcategory',[CategoryController::class, 'createcategory'])->name('dashboard.category.addcategory');
+    Route::get('/addcategory',[CategoryController::class,'getcategory']);
+    Route::get('/delete_category/{id}',[CategoryController::class,'delete']);
+
+    // Province
+    Route::post('addprovince',[ProvinceController::class,'createprovince'])->name('dashboard.province.addprovince');
+  
+
+});
+
+
+Route::middleware(['auth', 'is_admin'])->group(function () {
+    // Admin routes
+    Route::get('/dashboard', [DashboardController::class , 'index'])->name('dashboard.index');
+    // ... other admin routes
+});
+
+
 
