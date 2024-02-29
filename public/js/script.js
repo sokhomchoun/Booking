@@ -1,3 +1,10 @@
+const toggle = document.querySelector(".toggle");
+const navLists = document.querySelector(".nav-lists");
+
+toggle.addEventListener("click", function(){
+    navLists.classList.toggle("active");
+});
+
 const images = document.querySelectorAll(".img-wrapper > img");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");

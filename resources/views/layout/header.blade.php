@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ asset('img/icon.svg') }}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/details.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/styles.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/swiper-bundle.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/properties.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/bootstrap-icon.css')}}"/>
+
     <title>@yield('title')</title>
 </head>
 <body>
@@ -52,28 +56,40 @@
     </header> --}}
 
     <section class="header">
-        <header class="header-container">
+        <header class="header-container container">
           <div class="logo">
-            <a href="index.html"><img src="{{asset('img/logo.svg')}}" alt="Booking4U"></a>
+            <a href="#"><img src="{{asset('img/logo.svg')}}" alt="Booking4U"></a>
           </div>
+          <nav class="menu">
+            <ul class="nav-lists">
+                <li class="nav-items"><a href="">Hotels</a></li>
+                <li class="nav-items"><a href="">Resorts</a></li>
+                <li class="nav-items"><a href="">Guest Houses</a></li>
+                <li class="nav-items"><a href="">Holiday Homes</a></li>
+            </ul>
+          </nav>
           <div class="search-bar">
-            <i class="fa fa-search"></i>
-            <input type="text" name="search" id="search" placeholder="Places to go or Properties...">
-            <button class="btn-search">Search</button>
+            <input type="text" name="search" id="search" placeholder="Search...">
+            <button class="btn-search">
+                <i class="fa fa-search"></i>
+            </button>
           </div>
-          <div class="btn">
-
-            @if (Auth::check())
-            <form action="{{ route('logout') }}" method="post">
-                @csrf
-                <button type="submit" class="btn-primary btn-register">Logout</button>
-            </form>
-            <h2>{{ auth()->user()->email }}</h2>
-            @else
-                <a href="{{ route('register') }}" class="btn-primary btn-register">Register</a>
-                <a href="{{ route('login') }}" class="btn-secondary btn-signin">Sign In</a>
-            @endif
-            
-          </div>
+          <div class="button-container">
+                <button class="btn-search hidden">
+                    <i class="fa fa-search"></i>
+                </button>
+                @if (Auth::check())
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn-login">Logout</button>
+                </form>
+                <!-- <h2>{{ auth()->user()->email }}</h2> -->
+                    @else
+                        <a href="{{ route('login') }}" class="btn-login hidden">
+                            <i class="bi bi-person-circle"></i>                 
+                        </a>
+                    @endif
+                <span class="toggle"><i class="bi bi-list"></i></span>
+            </div>
         </header>
       </section>
