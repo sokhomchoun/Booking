@@ -35,3 +35,23 @@
 #search-button{
     background-color: #00728b !important;  
 }
+#size_image{
+    height: 120px;
+    margin-top: 20px;
+}
+#add_cate{
+    color: #00728b;
+    font-size: 22px;
+}
+#edit_btn{
+    background-color: #00728b !important;
+}
+#search_edit{
+    margin-left: 10px;
+}
+.select_province{
+    width: 30%;
+    height: 36px;
+    border: 1px solid #dbdbdb;
+    padding-left: 20px;
+}

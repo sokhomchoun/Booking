@@ -14,7 +14,9 @@ class Hotel extends Model
         'hotel_name',
         'image_hotel',
         'province',
-        'category_name',
-        'description'
+        'category',
+        'description',
+        'price',
+        'roomtype'
     ];
 }
