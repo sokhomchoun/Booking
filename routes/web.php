@@ -7,12 +7,14 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Auth\Middleware\Authenticate;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\RoomTypeController;
+use App\Http\Controllers\PropertyController;
 use App\Models\Province;
 use App\Models\RoomType;
 
@@ -111,5 +113,7 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     // ... other admin routes
 });
 
+Route::get('/property/',[PropertyController::class,'Property']);
 
+Route::get('/details/',[DetailsController::class,'Details']);
 

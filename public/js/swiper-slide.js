@@ -1,19 +1,23 @@
 // Home page slide
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 16,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     breakpoints:{
-        1025: {
+        1200: {
             slidesPerView: 4,
             spaceBetween: 20,
         },
-        769: {
-            slidesPerView : 4,
-        }
+        1024: {
+            slidesPerView : 3,
+        },
+        600: {
+            slidesPerView : 2,
+        },
+        
     },
 });
 

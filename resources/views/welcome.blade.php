@@ -1,6 +1,6 @@
 
 @extends('layout.layout')
-@section('title','Welcome')
+@section('title','Booking4U')
 
 @section('content')      
       <!-- ********* Slide Section Start ******** -->
