@@ -18,8 +18,12 @@
             <span>#129, Street 3, Thvy Cherng Village, Sangkat Andong Khmer, Kampot </span>
         </div>
         <div class="contacts">
-          <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:0969913197" target="_blank"> +855 96 9913 197</a>
-          <i class="fa fa-envelope" aria-hidden="true"></i><a href="http://rankakada10@gmail.com" target="_blank"> rankakada10@gmail.com</a>
+          <div class="tel">
+            <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:0969913197" target="_blank"> +855 96 9913 197</a>
+          </div>
+          <div class="mail">
+            <i class="fa fa-envelope" aria-hidden="true"></i><a href="http://rankakada10@gmail.com" target="_blank"> rankakada10@gmail.com</a>
+          </div>
         </div>
        </div>
     </section>

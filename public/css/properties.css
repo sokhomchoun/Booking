@@ -83,6 +83,7 @@ section {
   transform: rotate(-90deg);
 }
 .textBox .title {
+  color: var(--color-blue);
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -97,4 +98,21 @@ section {
 }
 .properties-type {
   margin-top: 2rem;
+  color: var(--color-blue);
+}
+.province-name {
+  color: var(--color-black);
+}
+@media screen and (max-width: 1024px) {
+  .about-province .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .slide-pictures, .textBox {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 599px){
+  
 }

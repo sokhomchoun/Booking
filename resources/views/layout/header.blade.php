@@ -57,11 +57,15 @@
     <nav>
       <div class="nav-bar">
         <i class='bi bi-list sidebarOpen' ></i>
-        <span class="logo navLogo"><a href="#">Booking4U.</a></span>
+        <span class="logo navLogo"><a href="#">
+            <img src="{{asset('img/logo.svg')}}" width="170px"/>
+        </a></span>
 
         <div class="menu">
           <div class="logo-toggle">
-            <span class="logo"><a href="#">Booking4U.</a></span>
+            <span class="logo"><a href="#">
+            <img src="{{asset('img/logo.svg')}}" width="170px"/>
+            </a></span>
             <i class='bi bi-x siderbarClose'></i>
           </div>
 

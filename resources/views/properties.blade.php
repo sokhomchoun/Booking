@@ -14,31 +14,40 @@
                 <div class="swiper mySwiper01">
                     <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="images/battambang-province.webp" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/iphone.jpg" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/iphone.jpg" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/iphone.jpg" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/iphone.jpg" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/iphone.jpg" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/iphone.jpg" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/iphone.jpg" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     <div class="swiper-slide">
-                      <img src="images/iphone.jpg" alt="">
+                      <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+
                     </div>
                     
                     </div>
@@ -82,7 +91,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -108,7 +117,7 @@
               <div class="items swiper-slide">
                 <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -134,7 +143,7 @@
               <div class="items swiper-slide">
                 <div class="items-content">
                     <div class="image">
-                      <img src="images/battambang-province.webp" alt="">
+                      <img  src="{{asset('img/kep.jpeg')}}"/>
                     </div>
                     <div class="bottom-content">
                       <div class="text">
@@ -160,7 +169,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -186,7 +195,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -212,7 +221,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -238,7 +247,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -264,7 +273,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -290,7 +299,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -316,7 +325,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -342,7 +351,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -386,7 +395,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -412,7 +421,7 @@
               <div class="items swiper-slide">
                 <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -438,7 +447,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -464,7 +473,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -490,7 +499,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -516,7 +525,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -542,7 +551,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -568,7 +577,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -594,7 +603,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -620,7 +629,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -646,7 +655,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -690,7 +699,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -716,7 +725,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -742,7 +751,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -768,7 +777,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -794,7 +803,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -820,7 +829,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -846,7 +855,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -872,7 +881,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -898,7 +907,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -924,7 +933,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -950,7 +959,7 @@
               <div class="items swiper-slide">
                 <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -993,7 +1002,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1019,7 +1028,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1045,7 +1054,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1071,7 +1080,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1097,7 +1106,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1123,7 +1132,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1149,7 +1158,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1175,7 +1184,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1201,7 +1210,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1227,7 +1236,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
@@ -1253,7 +1262,7 @@
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
-                    <img src="images/battambang-province.webp" alt="">
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="bottom-content">
                     <div class="text">
