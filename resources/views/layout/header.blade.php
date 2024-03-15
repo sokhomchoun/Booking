@@ -13,49 +13,13 @@
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/bootstrap-icon.css')}}"/>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/log-off.css' rel='stylesheet'>
     <title>@yield('title')</title>
 </head>
 <body>
-    {{-- <header>
-        
-        @if (Route::has('login'))
-                <div class="header-bar">
-                    @auth
-                    <div>
-                        <a href="{{ url('/') }}" >Home</a>
-                        @if(auth()->check() && auth()->user()->is_admin)
-                            <a href="{{ route('dashboard.index') }}" >Dashboard</a>
-                        @endif
-                        <a href="{{ route('student.index') }}" >Student</a>
-                    </div>
-                    @if(auth()->check() && auth()->user()->username === null)
-                    
-                            <h2>{{ auth()->user()->email }}</h2>
-                        @else
-                        <h2>{{ auth()->user()->username }}</h2>
-                  
-                    @endif
-                    
-                    <form action="{{ route('logout') }}" method="post">
-                        @csrf
-                        <button type="submit">Logout</button>
-                    </form>
-                        
-                    @else
-                        <a href="{{ route('login') }}" >Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    
-                    @endauth
-                </div>
-            @endif
-
-    </header> --}}
 
     <nav>
-      <div class="nav-bar">
+      <div class="nav-bar container">
         <i class='bi bi-list sidebarOpen' ></i>
         <span class="logo navLogo"><a href="#">
             <img src="{{asset('img/logo.svg')}}" width="170px"/>
@@ -91,9 +55,11 @@
         @if (Auth::check())
             <form action="{{ route('logout') }}" method="post">
                 @csrf
-                <button type="submit" class="btn-login">Logout</button>
+                <button type="submit" class="btn-logout">
+                    <i class="gg-log-off"></i>
+                </button>
             </form>
-            <h2>{{ auth()->user()->email }}</h2>
+            <!-- <h2>{{ auth()->user()->email }}</h2> -->
             @else
                 <a href="{{ route('login') }}" class="btn-login">
                     <i class="bi bi-person-circle"></i>                 

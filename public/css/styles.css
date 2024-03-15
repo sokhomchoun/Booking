@@ -32,7 +32,7 @@ nav{
 nav .nav-bar{
   position: relative;
   height: 100%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   width: 100%;
   background-color: #fff;
   margin: 0 auto;
@@ -212,6 +212,23 @@ nav .nav-bar .logo a{
   color: var(--color-blue);
   transition: all .5s ease;
 }
+.btn-logout {
+  /* margin-bottom: 1rem; */
+  outline: none;
+  border: none;
+  background-color: transparent;
+  /* height: 40px; */
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-logout .gg-log-off{
+  transform: scale(var(--ggs, 1.2));
+  color: var(--color-blue);
+  transition: all .5s ease;
+  margin-bottom: .5rem;
+}
 /* .btn-login:hover .bi-person-circle {
   color: var(--color-black);
 } */
@@ -232,9 +249,8 @@ nav .nav-bar .logo a{
   height: 95vh;
   overflow: hidden;
   /* margin-top: 4.85rem; */
-  object-fit: cover;
+  /* object-fit: cover; */
 }
-
 .img-wrapper > img {
   position: absolute;
   width: 100%;
@@ -363,7 +379,7 @@ nav .nav-bar .logo a{
 .trending-items{
   position: relative;
   width: 49%;
-  height: 320px;
+  height: 330px;
   border-radius: 20px;
   box-shadow: 0 0 30px rgb(196, 196, 196);
 }
@@ -375,9 +391,9 @@ nav .nav-bar .logo a{
 .trending-items img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 15px;
   object-fit: cover;
-  object-position: top;
+  object-position: right;
 }
 .province {
   position: absolute;
@@ -526,6 +542,9 @@ nav .nav-bar .logo a{
 /* Responsive */
 
 @media screen and (max-width: 1024px) {
+  nav .nav-bar .sidebarOpen{
+    display: block;
+  }
   .heading > h1 {
     font-size: 2.5rem;
   }
@@ -538,7 +557,9 @@ nav .nav-bar .logo a{
   .trending-items:first-child, 
   .trending-items:nth-child(4){
     width: 100%;
-    height: 320px;
+    height: 380px;
+    object-fit: cover;
+    object-position: bottom;
   }
   .trending-items:nth-child(2), 
   .trending-items:nth-child(3),
@@ -547,41 +568,7 @@ nav .nav-bar .logo a{
     width: 49%;
     height: 230px;
   }
-}
-
-@media screen and (max-width: 768px){
-  nav .nav-bar .sidebarOpen{
-    display: block;
-}
-.btn-container > button {
-  width: 36px;
-  height: 36px;
-  font-size: 1.5rem;
-}
-.dot {
-  width: 10px;
-  height: 10px;
-}
-.dot.active{
-  width: 24px;
-}
-.swiper-button-next,
-.swiper-button-prev {
-  padding: 1.2rem;
-  height: 1rem !important;
-  width: 1rem !important;
-}
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 1rem !important;
-}
-.swiper-button-next {
-  right: -1rem !important;
-}
-.swiper-button-prev {
-  left: -1rem !important;
-}
-.menu{
+  .menu{
     position: fixed;
     height: 100%;
     width: 320px;
@@ -630,6 +617,37 @@ nav.active .nav-bar .navLogo a{
   100% {
     width: 50%;
   }
+}
+}
+
+@media screen and (max-width: 768px){
+.btn-container > button {
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+}
+.dot.active{
+  width: 24px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  padding: 1.2rem;
+  height: 1rem !important;
+  width: 1rem !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem !important;
+}
+.swiper-button-next {
+  right: -1rem !important;
+}
+.swiper-button-prev {
+  left: -1rem !important;
 }
 }
 @media screen and (max-width: 599px){

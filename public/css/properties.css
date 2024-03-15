@@ -114,5 +114,13 @@ section {
 }
 
 @media screen and (max-width: 599px){
-  
+  .heading{
+    font-size: 1.5rem;
+  }
+  .textBox .text{
+    font-size: .8rem;
+  }
+  .properties-type,.textBox .title {
+    font-size: 1.2rem;
+  }
 }

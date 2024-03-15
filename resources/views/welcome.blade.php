@@ -6,7 +6,7 @@
       <!-- ********* Slide Section Start ******** -->
       <section class="slide-container">
         <div class="container-fluid img-wrapper">
-          <img src="{{asset('img/kohkong-province.jpeg')}}" class="active" />
+          <img src="{{asset('img/home_slide1.jpeg')}}" class="active" />
           <img  src="{{asset('img/kep.jpeg')}}"/>
           <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
           <img  src="{{asset('img/kep.jpeg')}}" alt="Kep province"/ >
@@ -34,28 +34,26 @@
         <div class="trending-container">
           <div class="trending-items">
             <!-- <span class="province">Siem Reap</span> -->
-            <a href="properties.html"><img src="{{asset('img/kep.jpeg')}}" alt="Kep province"/></a>
+            <a href=""><img src="{{asset('img/kompongThom.svg')}}"/></a>
           </div>
           <div class="trending-items">
             <!-- <span class="province">Kompot</span> -->
-            <a href=""><img  src="{{asset('img/kohkong-province.jpeg')}}"/></a>
+            <a href=""><img  src="{{asset('img/kompongspue.svg')}}"/></a>
           </div>
           <div class="trending-items">
             <!-- <span class="province">Kep</span> -->
-            <a href=""><img  src="{{asset('img/kep.jpeg')}}" alt="Kep province"/></a>
+            <a href=""><img  src="{{asset('img/kompongspue.svg')}}"/></a>
           </div>
           <div class="trending-items">
             <!-- <span class="province">Koh Kong</span> -->
-            <a href=""><img  src="{{asset('img/kep.jpeg')}}" alt="Kep province"/></a>
-          </div>
+            <a href=""><img src="{{asset('img/kompongThom.svg')}}"/></a>          </div>
           <div class="trending-items">
             <!-- <span class="province">Pursat</span> -->
-            <a href=""><img src="{{asset('img/kohkong-province.jpeg')}}"/></a>
+            <a href=""><img src="{{asset('img/kompot-province.jpeg')}}"/></a>
           </div>
           <div class="trending-items">
             <!-- <span class="province">Battambang</span> -->
-            <a href=""><img src="{{asset('img/kohkong-province.jpeg')}}"/></a>
-          </div>
+            <a href=""><img src="{{asset('img/kompongThom.svg')}}"/></a>          </div>
         </div>
       </div>
     </section>

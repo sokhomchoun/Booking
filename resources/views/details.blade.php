@@ -13,7 +13,7 @@
             <i class="fa fa-star-o" aria-hidden="true"></i>
             <span class="reviews">500 reviews</span>
         </div>
-        <div class="loction">
+        <div class="location">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <span>#129, Street 3, Thvy Cherng Village, Sangkat Andong Khmer, Kampot </span>
         </div>
@@ -119,11 +119,11 @@
           </div>
           <div id="info2">
             Room with:
-            <p> <img src="images/icons/guidance_garden.svg" alt="" width="16px"> Garden view</p>
-            <p> <img src="images/icons/pool.svg" alt="" width="20px"> Pool view</p>
-            <p> <img src="images/icons/guidance_terrace.svg" alt="" width="16px"> Terrace</p>
-            <p> <img src="images/icons/parking.svg" alt="" width="16px"> Free Parking</p>
-            <p> <img src="images/icons/wifi.svg" alt="" width="16px"> Free Wi-Fi</p>
+            <p> <img src="{{asset('img/icons/guidance_garden.svg')}}" width="16px"/> Garden view</p>
+            <p> <img src="{{asset('img/icons/pool.svg')}}" width="20px"> Pool view</p>
+            <p> <img src="{{asset('img/icons/guidance_terrace.svg')}}" width="16px"> Terrace</p>
+            <p> <img src="{{asset('img/icons/parking.svg')}}" width="16px"> Free Parking</p>
+            <p> <img src="{{asset('img/icons/wifi.svg')}}"width="16px"> Free Wi-Fi</p>
           </div>
         </div>
       </div>

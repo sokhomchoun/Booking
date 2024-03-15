@@ -12,10 +12,7 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-/* section {
-  width: 85%;
-  margin: 0 auto;
-} */
+
 .detail-heading .container{
     margin-top: 5rem;
 }
@@ -94,24 +91,33 @@ body {
     margin-top: 1.5rem;
     font-size: 1rem;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
-  .contents {
+  .details .contents {
     width: 70%;
   }
   .highlight {
-    background-color: rgba(164, 225, 239, 0.4);
+    /* background-color: rgba(164, 225, 239, 0.4); */
+    background-color: var(--color-white);
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
     width: 300px;
-    height: 380px;
+    height: 330px;
     padding-top: .5rem;
     padding-left: 1rem;
+    /* padding: .5rem 1rem; */
+  }
+  .highlight h4{
+    color: var(--color-blue);
   }
  #info1,#info2 {
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.5rem;
+    color: var(--color-blue);
   }
  #info1 > p , #info2 > p{
+    color: var(--color-black);
     font-size: 1rem;
     font-weight: 400;
  }
@@ -133,7 +139,7 @@ form{
 .input-data {
   width: 48%;
 }
-.input-data input,select {
+.input-data input,.input-data select {
   font-size: 1rem;
   width: 100%;
   padding: .5rem;
@@ -169,9 +175,38 @@ select:invalid {
   border: 1px solid var(--color-blue);
   transition: all .5 ease;
 }
+@media screen and (max-width:1024px) {
+  .SliderContainer .container{
+    height: 65vh;
+  }
+  .details .container{
+    /* display: block; */
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .details .contents {
+    width: 100%;
+  }
+  .details .highlight {
+    width: 100%;
+  }
+}
 @media screen and (max-width:768px){
+  .SliderContainer .container{
+    height: 60vh;
+  }
+  .detail-heading .property-name{
+    font-size: 2rem;
+  }
+  .booking .container > h1 {
+    font-size: 2rem;
+  }
   form{
     flex-direction: column;
+  }
+  label{
+    font-size: .8rem;
+    margin-bottom: 0 !important;
   }
   .input-data {
     width: 100%;
@@ -179,4 +214,32 @@ select:invalid {
   .btn-booking input{
     padding: .7rem 4rem;
   }
+  .SliderContainer .container{
+    height: 60vh;
+  }
+  .rating, .location, .contacts{
+    font-size: .8rem;
+    width: 100%;
+  } 
+  .input-data input,.input-data select {
+    padding: 0 .5rem;
+    font-size: .8rem;
+  }
+  .btn-booking input {
+    padding: 0.2rem 3rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .detail-heading .property-name{
+    font-size: 1.5rem;
+  }
+  .booking .container > h1 {
+    font-size: 1.5rem;
+  }
+  .SliderContainer .container{
+    height: 45vh;
+  }
+  .rating, .location, .contacts{
+    font-size: .7rem;
+  } 
 }
