@@ -72,7 +72,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                  <img  src="{{asset('img/kep.jpeg')}}" alt="Kep province"/>
+                  <img  src="{{asset('img/battambang.jpeg')}}" alt="Kep province"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Battambang</p>
@@ -83,7 +83,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                  <img  src="{{asset('img/kep.jpeg')}}" alt="Kep province"/>
+                  <img  src="{{asset('img/siemreap.jpeg')}}" alt="Kep province"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Siem Reap</p>
@@ -94,10 +94,10 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kampongspeu.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
-                    <p class="destenation">Kompong Spue</p>
+                    <p class="destenation">Kampong Speu</p>
                     <p class="property">777 Properties</p>
                   </div>
                 </div>
@@ -105,7 +105,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kohkong.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Koh Kong</p>
@@ -116,7 +116,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/phnompenh.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Phnom Penh</p>
@@ -127,10 +127,10 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kampongcham.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
-                    <p class="destenation">Kompong Cham</p>
+                    <p class="destenation">Kampong Cham</p>
                     <p class="property">777 Properties</p>
                   </div>
                 </div>
@@ -138,7 +138,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kandal.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Kandal</p>
@@ -149,7 +149,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/preahvihear.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Preah Vihear</p>
@@ -160,7 +160,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img src="{{asset('img/banteaymeanchey.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Banteay Meanchey</p>
@@ -171,7 +171,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kampongthom.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Kampong Thom</p>
@@ -182,7 +182,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/preyveng.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Prey Veng</p>
@@ -193,7 +193,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kep.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Kep</p>
@@ -204,7 +204,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kratie.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Kratie</p>
@@ -215,7 +215,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/mondulkiri.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Mondulkiri</p>
@@ -226,7 +226,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/oddarmeanchey.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Oddar Meanchey</p>
@@ -237,10 +237,10 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/pailin.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
-                    <p class="destenation">Paillin</p>
+                    <p class="destenation">Pailin</p>
                     <p class="property">777 Properties</p>
                   </div>
                 </div>
@@ -248,7 +248,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/preahsihanouk.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Preah Sihanouk</p>
@@ -259,10 +259,10 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kampongchhnang.avif')}}"/>
                   </div>
                   <div class="destenation-property">
-                    <p class="destenation">Kompong Chhnang</p>
+                    <p class="destenation">Kampong Chhnang</p>
                     <p class="property">777 Properties</p>
                   </div>
                 </div>
@@ -270,7 +270,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/pursat.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Pursat</p>
@@ -281,7 +281,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/takeo.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Takeo</p>
@@ -292,7 +292,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/svayrieng.avif')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Svay Rieng</p>
@@ -303,10 +303,10 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/steungtreng.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
-                    <p class="destenation">Stung Steng</p>
+                    <p class="destenation">Steung Treng</p>
                     <p class="property">777 Properties</p>
                   </div>
                 </div>
@@ -314,7 +314,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/rattanakkiri.jpg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Rattanak Kiri</p>
@@ -325,10 +325,10 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/kampot.jpeg')}}"/>
                   </div>
                   <div class="destenation-property">
-                    <p class="destenation">Kompot</p>
+                    <p class="destenation">Kampot</p>
                     <p class="property">777 Properties</p>
                   </div>
                 </div>
@@ -336,7 +336,7 @@
               <div class="cards swiper-slide">
                 <div class="card-content">
                   <div class="image">
-                    <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
+                    <img  src="{{asset('img/tboungkhmum.jpg')}}"/>
                   </div>
                   <div class="destenation-property">
                     <p class="destenation">Tboung Khmum</p>
