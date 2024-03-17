@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('hotel_name',255)->nullable();
             $table->string('image_hotel',255)->nullable();
             $table->string('province',255)->nullable();
-            $table->string('category_name',255)->nullable();
+            $table->string('category',255)->nullable();
             $table->longText('description')->nullable();
+            $table->string('price',50)->nullable();
+            $table->string('roomtype',50)->nullable();
             $table->timestamps();
         });
     }

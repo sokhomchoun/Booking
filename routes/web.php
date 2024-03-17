@@ -10,6 +10,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\RoomController;
@@ -34,6 +35,14 @@ use App\Models\RoomType;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/properties', function () {
+    return view('properties');
+});
+Route::get('/details', function () {
+    return view('details');
+});
+
 
 
 // end route for view page 
@@ -104,6 +113,16 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/edittype/{id}',[RoomTypeController::class,'edittype']);
     Route::put('/updatetype/{id}',[RoomTypeController::class,'updatetype']);
 
+    // read data to front page
+    Route::get('/',[FrontController::class,'trending']);
+    Route::get('/properties',[FrontController::class,'getproperties']);
+    Route::get('/details',[FrontController::class,'getdetails']);
+    Route::get('/selectedprovince/{province}',[FrontController::class,'selectedProvince']);
+
+
+    // Route::get('/properties',[PropertyController::class,'showproperties']);
+    // Route::get('/detail',[PropertyController::class,'detail']);
+
 });
 
 
@@ -113,7 +132,7 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     // ... other admin routes
 });
 
-Route::get('/property/',[PropertyController::class,'Property']);
+// Route::get('/property/',[PropertyController::class,'Property']);
 
-Route::get('/details/',[DetailsController::class,'Details']);
+// Route::get('/details/',[DetailsController::class,'Details']);
 

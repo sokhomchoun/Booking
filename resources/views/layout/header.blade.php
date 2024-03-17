@@ -21,7 +21,7 @@
     <nav>
       <div class="nav-bar container">
         <i class='bi bi-list sidebarOpen' ></i>
-        <span class="logo navLogo"><a href="#">
+        <span class="logo navLogo"><a href="/">
             <img src="{{asset('img/logo.svg')}}" width="170px"/>
         </a></span>
 
@@ -34,10 +34,9 @@
           </div>
 
             <ul class="nav-links">
-                <li><a href="#">Hotels</a></li>
-                <li><a href="#">Resorts</a></li>
-                <li><a href="#">Guest Houses</a></li>
-                <li><a href="#">Holiday Homes</a></li>
+                @foreach ($category as $item)
+                    <li><a href="#">{{ $item->category_name }}</a></li>
+                @endforeach
             </ul>
         </div>
         <div class="button-container">

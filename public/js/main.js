@@ -1,4 +1,4 @@
-console.log('hello world form public folder js')
+
 
 function clickMe(){
     console.log('click me')
@@ -28,3 +28,5 @@ if(confirmPassword && checkConfirmPassword){
     })
     
 }
+
+
