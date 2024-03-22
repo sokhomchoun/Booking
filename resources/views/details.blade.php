@@ -31,36 +31,12 @@
        <div class="container">
         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper04">
           <div class="swiper-wrapper">
+            @foreach($viewroom as $viewrooms)
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              <img src="{{ asset('uploads/photos/'.$viewrooms->type_image) }}">
             </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-            </div>
+            @endforeach
+
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>

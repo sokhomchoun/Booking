@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
 </head>
 <body>
-    <div class="menu">
+    {{-- <div class="menu">
         <a href="{{route('home')}}">Home Page</a>
         <a href="{{route('login')}}">Login</a>
-    </div>
+    </div> --}}
     <div class="header-login">
         <h1>Create Account</h1>
     </div>

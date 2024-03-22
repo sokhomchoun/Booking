@@ -32,16 +32,27 @@ use App\Models\RoomType;
 
 // route for view page 
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');
 
-Route::get('/properties', function () {
-    return view('properties');
-});
-Route::get('/details', function () {
-    return view('details');
-});
+// display to front page
+Route::get('/',[FrontController::class,'displayfront']);
+Route::get('/properties',[FrontController::class,'getproperties']);
+
+Route::get('/details',[FrontController::class,'getdetails']);
+Route::get('/selectedprovince/{province}',[FrontController::class,'selectedProvince']);
+Route::get('/selecteddetails/{id}',[FrontController::class,'selectedDetail']);
+
+//  end display to front page
+
+// Route::get('/properties', function () {
+//     return view('properties');
+// });
+
+// Route::get('/details', function () {
+//     return view('details');
+// });
 
 
 
@@ -114,10 +125,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::put('/updatetype/{id}',[RoomTypeController::class,'updatetype']);
 
     // read data to front page
-    Route::get('/',[FrontController::class,'trending']);
-    Route::get('/properties',[FrontController::class,'getproperties']);
-    Route::get('/details',[FrontController::class,'getdetails']);
-    Route::get('/selectedprovince/{province}',[FrontController::class,'selectedProvince']);
+    // Route::get('/',[FrontController::class,'trending']);
+    // Route::get('/properties',[FrontController::class,'getproperties']);
+    // Route::get('/details',[FrontController::class,'getdetails']);
+    // Route::get('/selectedprovince/{province}',[FrontController::class,'selectedProvince']);
 
 
     // Route::get('/properties',[PropertyController::class,'showproperties']);
@@ -132,7 +143,6 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     // ... other admin routes
 });
 
-// Route::get('/property/',[PropertyController::class,'Property']);
-
+// Route::get('/property/',[PropertyController::class,'Property']); 
 // Route::get('/details/',[DetailsController::class,'Details']);
 

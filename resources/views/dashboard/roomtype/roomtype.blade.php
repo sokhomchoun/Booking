@@ -47,16 +47,31 @@
             <div class="category_header">
               
               <div class="mb-3">
-                <label for="" class="form-label">Type No</label>
-                <input type="text" class="form-control" id="clearData" name="type_no">
+                <label for="" class="form-label">Roon No</label><br>
+                <select name="room_no" class="select_province">
+                  <option value="">Selected RoomNo</option>
+                  @foreach ($room as $rooms)
+                    <option id="clearData" value="{{ $rooms->room_no }}" name="room_no">{{ $rooms->room_no }}</option>
+                  @endforeach        
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="form-label">Hotel No</label><br>
+                <select name="hotel_no" class="select_province">
+                  <option value="">Selected HotelNo</option>
+                  @foreach($hotel as $hotels)
+                    <option id="clearData" value="{{ $hotels->id }}" name="hotel_no">{{ $hotels->id }}</option>
+                  @endforeach
+                </select>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Bed</label>
-                <input type="text" class="form-control" name="bed_number">
+                <input type="text" class="form-control" name="bed">
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Price Per Night</label>
-                <input type="text" class="form-control" name="price_per_night">
+                <input type="text" class="form-control" name="price">
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Capacity</label>
@@ -67,11 +82,11 @@
                 <textarea class="form-control" id="" rows="3" name="description"></textarea>
               </div>
               
+              <div class="mb-3">
+                <label for="" class="form-label">Type Image</label>
+                <input type="file" class="form-control" placeholder="Type" name="type_image">
+              </div>
 
-              {{-- <div class="mb-3">
-                <label for="" class="form-label">Image</label>
-                <input type="file" class="form-control" placeholder="Hotel Name" name="image_room">
-              </div> --}}
             </div>
 
             <div class="btn_hotel d-flex justify-content-center">
@@ -108,7 +123,9 @@
           <table class="table table-striped" >
             <thead>
               <tr>
-                <th class="head_table" scope="col">No.</th>
+                <th class="head_table" scope="col">Room No.</th>
+                <th class="head_table" scope="col">Hotel No</th>
+                <th class="head_table" scope="col">Type Image</th>
                 <th class="head_table" scope="col">Bed</th>
                 <th class="head_table" scope="col">Price Per Night</th>
                 <th class="head_table" scope="col">Description</th>
@@ -119,9 +136,11 @@
             <tbody id="search_table">
               @foreach($roomtype as $item)
               <tr>
-                <th scope="row">{{$item->type_no}}</th>
-                <td>{{$item->bed_number}}</td>
-                <td>{{$item->price_per_night}}</td>
+                <th scope="row">{{$item->room_no}}</th>
+                <td>{{ $item->hotel_no }}</td>
+                <td><img src="{{ asset('uploads/photos/'.$item->type_image) }}"  width="30px"></td>
+                <td>{{$item->bed}}</td>
+                <td>{{$item->price}}</td>
                 <td>{{$item->description}}</td>
                 <td>{{$item->capacity}}</td>
                 <td>

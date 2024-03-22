@@ -6,7 +6,11 @@
     <section class="about-province">
       <div class="container">
         <h1 class="heading">
-          Explore <span>Siem Reap</span>
+          Explore <span>
+            @foreach ($getprovince as $provider)
+              {{ $provider->province }}
+            @endforeach
+          </span>
         </h1>
         <div class="content">
             <div class="slide-pictures">
@@ -31,10 +35,17 @@
                 </div>
             </div>
             <div class="textBox">
-                <h4 class="title">About Siem Reap</h4>
+                <h4 class="title">About  
+                @foreach ($getprovince as $provider)
+                  {{ $provider->province }}
+                @endforeach</h4>
                 <p class="text">
                     When the morning light washes over the overgrown temples
-                    and ruins of Angkor Wat, a simple Siem Reap sunrise becomes a
+                    and ruins of Angkor Wat, a simple 
+                    @foreach ($getprovince as $provider)
+                      {{ $provider->province }}
+                    @endforeach
+                     sunrise becomes a
                     profound event. The ancient structures are contained within one 
                     of the largest religious complexes in the world. The complex and 
                     the 12th century Angkor Thom royal city are considered the main 
@@ -81,7 +92,7 @@
                             <span>{{ $properties->province }}</span>
                           </div>
                         </div>
-                        <button class="btn-viewDeal">View Deal</button>
+                        <a href="{{ url('selecteddetails/'.$properties->id) }}"><button class="btn-viewDeal">View Deal</button></a>
                       </div>
                     </div>
                   </div>    
@@ -684,7 +695,7 @@
               <div class="items swiper-slide">
                 <div class="items-content">
                     <div class="image">
-                      <a href=""><img src="{{ asset('uploads/photos/'.$getguesthouses->image_hotel) }}"></a>
+                      <img src="{{ asset('uploads/photos/'.$getguesthouses->image_hotel) }}">
                     </div>
                     <div class="bottom-content">
                       <div class="text">
@@ -703,7 +714,7 @@
                           <span>{{ $getguesthouses->province }}</span>
                         </div>
                       </div>
-                      <button class="btn-viewDeal">View Deal</button>
+                      <a href="{{ url('selecteddetails/'.$getguesthouses->id) }}"><button class="btn-viewDeal">View Deal</button></a>
                     </div>
                   </div>
                 </div>  

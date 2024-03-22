@@ -13,12 +13,22 @@ class RoomTypeController extends Controller
     }
 
     public function createroomtype(Request $request){
+
+        if($request->has('type_image')){
+            $file = $request->file('type_image');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $path = 'uploads/photos/';
+            $file->move($path,$filename);
+        }
         $roomtype = RoomType::create([
-            'type_no' => $request->type_no,
-            'bed_number' => $request->bed_number,
-            'price_per_night' => $request->price_per_night,
+            'room_no' => $request->room_no,
+            'hotel_no' => $request->hotel_no,
+            'bed' => $request->bed,
+            'price' => $request->price,
             'description' => $request->description,
             'capacity' => $request->capacity,
+            'type_image' => $filename
 
         ]);
         $roomtype->save();
@@ -28,8 +38,12 @@ class RoomTypeController extends Controller
 
     public function getroomtype(){
         $roomtype = DB::table('roomtype')->get();
+        $hotel = DB::table('hotel')->get();
+        $room = DB::table('room')->get();
         return view('dashboard.roomtype.roomtype',[
-            'roomtype' => $roomtype
+            'roomtype' => $roomtype,
+            'hotel' => $hotel,
+            'room' => $room,
         ]);
     }
 
@@ -49,9 +63,10 @@ class RoomTypeController extends Controller
 
     public function updatetype(Request $request,$id){
         $updatetype = RoomType::findOrFail($id);
-        $updatetype->type_no = $request->input('type_no');
-        $updatetype->bed_number = $request->input('bed_number');
-        $updatetype->price_per_night = $request->input('price_per_night');
+        $updatetype->room_no = $request->input('room_no');
+        $updatetype->hotel_no = $request->input('hotel_no');
+        $updatetype->bed = $request->input('bed');
+        $updatetype->price = $request->input('price');
         $updatetype->description = $request->input('description');
         $updatetype->capacity = $request->input('capacity');
         $updatetype->update();

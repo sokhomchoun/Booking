@@ -51,19 +51,23 @@
                 <input type="text" class="form-control" id="clearData" name="room_no">
               </div>
               <div class="mb-3">
-                <label for="" class="form-label">Hotel Name</label>
-                <input type="text" class="form-control" name="hotel_name">
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">RoomType</label><br>
-                <select name="type_no" class="select_province">
-                  <option value="">Selected RoomType</option>
-                  @foreach ($roomtype as $roomtypes)
-                      <option id="clearData" value="{{$roomtypes->type_no}}" name="roomtype">{{ $roomtypes->type_no }}</option>
+                <label for="" class="form-label">Hotel No</label><br>
+                <select name="hotel_no" class="select_province">
+                  <option value="">Selected HotelNo</option>
+                  @foreach ($hotel as $hotels)
+                    <option id="clearData" value="{{ $hotels->id }}" name="hotel_no">{{ $hotels->id }}</option>
                   @endforeach
                 </select>
               </div>
-    
+              <div class="mb-3">
+                <label for="" class="form-label">Province</label><br>
+                <select name="province" class="select_province">
+                  <option value="">Selected Province</option>
+                  @foreach ($province as $provinces)
+                    <option id="clearData" value="{{$provinces->province}}" name="province">{{ $provinces->province }}</option>
+                  @endforeach
+                </select>
+              </div>    
               <div class="mb-3">
                 <label for="" class="form-label">Image</label>
                 <input type="file" class="form-control" placeholder="Hotel Name" name="image_room">
@@ -97,7 +101,8 @@
                 <label for="" class="form-label">Name</label>
                 <input type="text" class="form-control" id="category_name" name="category_name">
               </div>
-    
+
+        
               <div class="mb-3">
                 <label for="" class="form-label">Image</label>
                 <input type="file" class="form-control" name="category_image">
@@ -142,18 +147,18 @@
               <tr>
                 <th class="head_table" scope="col">No.</th>
                 <th class="head_table" scope="col">Image</th>
-                <th class="head_table" scope="col">Hotel</th>
+                <th class="head_table" scope="col">Hotel No</th>
                 <th class="head_table" scope="col">Province</th>
                 <th class="head_table" scope="col">Action</th>
               </tr>
             </thead>  
             <tbody id="search_table">
               @foreach($room as $item)
-              <tr>
+              <tr>  
                 <th scope="row">{{$item->room_no}}</th>
                 <td><img src="{{ asset('uploads/photos/'.$item->image_room) }}"  width="30px"></td>
-                <td>{{$item->hotel_name}}</td>
-                <td>{{$item->type_no}}</td>
+                <td>{{$item->hotel_no}}</td>
+                <td>{{$item->province}}</td>  
                 <td>
                   <a href="{{ url('/editroom/'.$item->id) }}" class="btn btn-success btn-sm" id="edit_btn"><span class="icon_save"><i class="bi bi-pencil-square"></i></span>Edit</a>
                   <a href="{{ url('/deleteroom/'.$item->id) }}" class="btn btn-danger btn-sm"><span class="icon_save"><i class="bi bi-trash3"></i></span>Delete</a>

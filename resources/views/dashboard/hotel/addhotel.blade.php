@@ -68,7 +68,7 @@
                   @endforeach
                 </select>
               </div>
-              <div class="mb-3">
+              {{-- <div class="mb-3">
                 <label for="" class="form-label">RoomType</label><br>
                 <select name="roomtype" class="select_province">
                   <option value="">Selected RoomType</option>
@@ -76,7 +76,7 @@
                       <option id="clearData" value="{{$rooms->type_no}}" name="roomtype">{{ $rooms->type_no }}</option>
                   @endforeach
                 </select>
-              </div>
+              </div> --}}
               <div class="mb-3">
                 <label for="" class="form-label">Price</label>
                 <input type="text" class="form-control" name="price">

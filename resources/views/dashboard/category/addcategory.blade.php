@@ -168,7 +168,7 @@
       <script src="{{ asset('js/dashboard/second.js')}}"></script>
 
       
-      <script>
+      {{-- <script>
         function fillModal(id){
           $.ajax({
             url:'/editcate/' + id ,
@@ -207,7 +207,7 @@
           });
         }); 
         
-      </script>
+      </script> --}}
 
 
     

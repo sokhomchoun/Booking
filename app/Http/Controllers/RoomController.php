@@ -25,9 +25,10 @@ class RoomController extends Controller
 
         $room = Room::create([
             'room_no' => $request->room_no,
-            'hotel_name' => $request->hotel_name,
+            'hotel_no' => $request->hotel_no,
+            'province' => $request->province,
             'image_room' => $filename,
-            'type_no' => $request->type_no,
+           
         ]);
         $room->save();
 
@@ -36,10 +37,12 @@ class RoomController extends Controller
 
     public function getroom(){
         $room = DB::table('room')->get();
-        $roomtype = DB::table('roomtype')->get();
+        $province = DB::table('province')->get();
+        $hotel = DB::table('hotel')->get();
         return view('dashboard.room.addroom',[
             'room' => $room,
-            'roomtype' => $roomtype
+            'province' => $province,
+            'hotel' => $hotel,
         ]);
     }
 
@@ -62,8 +65,8 @@ class RoomController extends Controller
     public function updateroom(Request $request,$id){
         $updateroom = Room::findOrFail($id);
         $updateroom->room_no = $request->input('room_no');
-        $updateroom->hotel_name = $request->input('hotel_name');
-        $updateroom->type_no = $request->input('type_no');
+        $updateroom->hotel_no = $request->input('hotel_no');
+        $updateroom->province = $request->input('province');
 
         if($request->hasfile('image_province'))
         {
