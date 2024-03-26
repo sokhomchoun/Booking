@@ -167,7 +167,7 @@
               @endforeach
             </tbody>
           </table>
-      </main><!-- End #main -->
+      </main><!-- End #main -->     
 
       @include('dashboard/component/footer');
 
