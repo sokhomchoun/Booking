@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('capacity',255)->nullable();
             $table->string('type_image',255)->nullable();
             $table->timestamps();
-        });
+        }); 
     }
 
     /**
