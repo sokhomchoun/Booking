@@ -65,7 +65,7 @@
               <button onclick="clearText()" type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><span class="icon_save"><i class="bi bi-trash3"></i></span>Clear</button>
             </div>
           </form>
-
+   
 
 
       </main><!-- End #main -->
