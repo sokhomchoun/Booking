@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('hotel_no',255)->nullable();
             $table->string('province',255)->nullable();
             $table->string('image_room',255)->nullable();
-            $table->timestamps(); 
+            $table->timestamps();
         });
     }
 
