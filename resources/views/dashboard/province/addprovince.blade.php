@@ -142,7 +142,7 @@
       <script src="{{ asset('js/dashboard/second.js')}}"></script>
 
       
-      {{-- <script>
+      <script>
         $('#searchPro').on('keyup', function(){
           var query = $(this).val();
           $.ajax({
@@ -170,7 +170,7 @@
             }
           });
         });
-      </script> --}}
+      </script>
 
 
     

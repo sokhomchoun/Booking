@@ -67,5 +67,13 @@ class FrontController extends Controller
         ]);
     }
 
+    public function gethotel($hotel_no){
+        $viewroom = ViewRoom::where('hotel_no',$hotel_no)->get();
+        return view('details',
+        compact(
+            'viewroom' ,
+        ));
+    }
+   
 
 }

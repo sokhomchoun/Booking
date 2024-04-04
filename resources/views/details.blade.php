@@ -107,31 +107,37 @@
     <section class="booking">
       <div class="container">
         <h1 class="title">View prices for your travel dates</h1>
-        <form action="" method="get">
+        <form action="{{ route('details') }}" method="POST" enctype="multipart/form-data">
+          @csrf
           <div class="input-data">
             <label for="check_in">Check in</label> <br>
-            <input type="text" name="check_in" id="check_in" required onfocus="(this.type='date')" placeholder="Check in Date">
+            <input type="text" name="check_in_date" id="check_in" required onfocus="(this.type='date')" placeholder="Check in Date">
           </div>
           <div class="input-data">
             <label for="check_out">Check out</label> <br>
-            <input type="text" name="check_out" id="check_out" required onfocus="(this.type='date')" placeholder="Check out Date">
+            <input type="text" name="check_out_date" id="check_out" required onfocus="(this.type='date')" placeholder="Check out Date">
           </div>
           <div class="input-data">
-            <label for="room_type">Room Type</label> <br>
-            <select name="room_type" id="room_type" required>
-              <option value="" disabled selected hidden> Select type of rooms</option>
-              <option value="1bed">1 Single Bed</option>
-              <option value="1bed">2 Single Bed</option>
-              <option value="1bed">1 Double Bed</option>
+            <label for="roomtype">Room Type</label> <br>
+            <select name="bed" id="room_type" required>
+              <option value=""> Select type of roomtype</option>
+              @foreach($viewroom as $items)
+                <option value="{{ $items->bed }}" name="bed">{{ $items->bed }} Bed</option>
+              @endforeach
             </select>
           </div>
           <div class="input-data">
-            <label for="rooms">Rooms</label> <br>
-            <input type="number" name="rooms" id="rooms" placeholder="Enter amount of rooms" required>
+            <label for="room">Room Number</label> <br>
+            @foreach($viewroom as $index => $items)
+            @if($index === 0)
+              <input type="text" name="room_no" id="rooms" value="{{ $items->room_no }}">
+            @endif
+          @endforeach
+            
           </div>
           <div class="input-data">
             <label for="tel">Phone Number</label> <br>
-            <input type="tel" name="tel" id="tel" placeholder="Enter your number phone" required>
+            <input type="tel" name="phone_number" id="tel" placeholder="Enter your number phone" required>
           </div>
           <div class="input-data">
             <label for="email">Email</label> <br>
@@ -139,16 +145,17 @@
           </div>
           <div class="input-data">
             <label for="guests">Guests</label> <br>
-            <input type="number" name="guests" id="guests" placeholder="Enter amount of people" required>
+            <input type="text" name="guest" id="guests" placeholder="Enter amount of people" required>
           </div>
           <div class="input-data">
             <label for="payment">Payment</label> <br>
-            <input type="text" name="payment" id="payment" disabled>
+            <input type="text" name="payment" value="20 $" id="payment" disabled>
           </div>
           <div class="btn-booking">
             <input type="submit" value="Booking Now">
           </div>
         </form>
+
       </div>
     </section>
 @endsection

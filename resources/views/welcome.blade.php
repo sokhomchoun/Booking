@@ -3,7 +3,7 @@
 @section('title','Booking4U')
 
 @section('content')    
-@include('loading')
+{{-- @include('loading') --}}
       <!-- ********* Slide Section Start ******** -->
       <section class="slide-container">
         <div class="container-fluid img-wrapper">
@@ -107,7 +107,7 @@
                         <span> {{ $hotels->province }}</span>
                       </div>
                     </div>
-                    <button class="btn-viewDeal">View Deal</button>
+                    <a href="{{ url('selecteddetails/'.$hotels->id) }}"><button class="btn-viewDeal">View Deal</button></a>
                   </div>
                 </div>
               </div>   

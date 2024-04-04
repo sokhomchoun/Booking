@@ -66,6 +66,17 @@
         </ul>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#booing" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Booking</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="booing" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+              <a href="{{ '/booking' }}"><i class="bi bi-circle"></i><span>View Booking</span></a>
+          </li>
+        </ul>
+      </li>
+
 
 
     </ul>

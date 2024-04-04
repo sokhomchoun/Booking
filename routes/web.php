@@ -15,6 +15,7 @@ use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\RoomTypeController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PropertyController;
 use App\Models\Province;
 use App\Models\RoomType;
@@ -30,33 +31,18 @@ use App\Models\RoomType;
 |
 */
 
-// route for view page 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('home');
 
 // display to front page
 Route::get('/',[FrontController::class,'displayfront']);
 Route::get('/properties',[FrontController::class,'getproperties']);
-
 Route::get('/details',[FrontController::class,'getdetails']);
 Route::get('/selectedprovince/{province}',[FrontController::class,'selectedProvince']);
 Route::get('/selecteddetails/{id}',[FrontController::class,'selectedDetail']);
+Route::get('/selectedprovince/{hotel_no}',[FrontController::class,'gethotel']);
 
 //  end display to front page
 
-// Route::get('/properties', function () {
-//     return view('properties');
-// });
-
-// Route::get('/details', function () {
-//     return view('details');
-// });
-
-
-
-// end route for view page 
 
 // Register dashboard
 Route::get('/register', function (){ return view('register');})->name('register');
@@ -124,15 +110,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/edittype/{id}',[RoomTypeController::class,'edittype']);
     Route::put('/updatetype/{id}',[RoomTypeController::class,'updatetype']);
 
-    // read data to front page
-    // Route::get('/',[FrontController::class,'trending']);
-    // Route::get('/properties',[FrontController::class,'getproperties']);
-    // Route::get('/details',[FrontController::class,'getdetails']);
-    // Route::get('/selectedprovince/{province}',[FrontController::class,'selectedProvince']);
-
-
-    // Route::get('/properties',[PropertyController::class,'showproperties']);
-    // Route::get('/detail',[PropertyController::class,'detail']);
+    // Booking
+    Route::get('/booking',[BookingController::class,'booking']);
+    Route::post('/details',[BookingController::class,'createbooing'])->name('details');
 
 });
 
@@ -143,6 +123,4 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     // ... other admin routes
 });
 
-// Route::get('/property/',[PropertyController::class,'Property']); 
-// Route::get('/details/',[DetailsController::class,'Details']);
 

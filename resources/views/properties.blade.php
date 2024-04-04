@@ -63,7 +63,11 @@
     <!-- Hotel Section Start-->
     <section class="hotel-container">
         <div class="container">
-          <h4 class="properties-type">Hotels Collection in <span class="province-name">Siem Reap</span></h4>
+          <h4 class="properties-type">Hotels Collection in <span class="province-name">
+            @foreach ($getprovince as $provider)
+            {{ $provider->province }}
+           @endforeach
+            </span></h4>
         <div class="swiper-container">
           <div class="box mySwiper">
             <div class="content swiper-wrapper">   
@@ -376,13 +380,14 @@
     <!-- Resort Sectiom Start -->
     <section class="resort-container">
         <div class="container">
-          <h4 class="properties-type">Resorts Collection in <span class="province-name">Siem Reap</span></h4>
+          <h4 class="properties-type">Resorts Collection in <span class="province-name">
+            @foreach ($getprovince as $provider)
+             {{ $provider->province }}
+            @endforeach</span></h4>
         <div class="swiper-container">
           <div class="box mySwiper">
             <div class="content swiper-wrapper">  
               
-              
-
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
@@ -686,7 +691,11 @@
     <!-- Guest House Section Start -->
     <section class="guestHouse-container">
       <div class="container">
-        <h4 class="properties-type">Guest House Collection in <span class="province-name">Siem Reap</span></h4>
+        <h4 class="properties-type">Guest House Collection in <span class="province-name">
+          @foreach ($getprovince as $provider)
+           {{ $provider->province }}
+          @endforeach
+        </span></h4>
         <div class="swiper-container">
           <div class="box mySwiper">
             <div class="content swiper-wrapper">
@@ -719,9 +728,6 @@
                   </div>
                 </div>  
               @endforeach
-              
-
-              
               
 
               <div class="items swiper-slide">
@@ -997,7 +1003,11 @@
     <!-- Holyday Home Section Start-->
     <section class="holydayHome-container">
       <div class="container">
-        <h4 class="properties-type">Holyday Home Collection in <span class="province-name">Siem Reap</span></h4>
+        <h4 class="properties-type">Holyday Home Collection in <span class="province-name">
+          @foreach ($getprovince as $provider)
+          {{ $provider->province }}
+         @endforeach
+       </span></h4>
         <div class="swiper-container">
           <div class="box mySwiper">
             <div class="content swiper-wrapper">        

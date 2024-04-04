@@ -13,13 +13,16 @@ return new class extends Migration
     {
         Schema::create('booking', function (Blueprint $table) {
             $table->id();
-            $table->string('booking_no',255)->nullable();
             $table->string('room_no',255)->nullable();
+            $table->string('roomtype',255)->nullable();
             $table->string('guest',255)->nullable();
+            $table->string('email',255)->nullable();
+            $table->string('phone_number',255)->nullable();
             $table->string('check_in_date',255)->nullable();
             $table->string('check_out_date',255)->nullable();
-            $table->string('total_price',255)->nullable();
+            $table->string('payment',255)->nullable();
             $table->string('status',255)->nullable();
+            $table->string('bed',100)->nullable();
             $table->timestamps();
         });
     }
