@@ -66,11 +66,12 @@ table, th, td {
     border-collapse: collapse;
   }
 
- .formlogin{
+ .form__login{
     background-image: url(../img/newhotelbackground.jpg);
     height: 100vh;
     padding: 4%;
  }
+
  .txt__email{
     width: 100%;
     height: 35px;

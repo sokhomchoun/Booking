@@ -12,7 +12,8 @@
 
 
 
-    <div class="formlogin">
+    <div class="form__login">
+
         <form action="{{route('user.login')}}" method="POST" class="form-register" enctype="multipart/form-data">
             @csrf
             @method('post')
