@@ -40,6 +40,10 @@ Route::get('/details',[FrontController::class,'getdetails']);
 Route::get('/selectedprovince/{province}',[FrontController::class,'selectedProvince']);
 Route::get('/selecteddetails/{id}',[FrontController::class,'selectedDetail']);
 Route::get('/selectedprovince/{hotel_no}',[FrontController::class,'gethotel']);
+Route::get('/fillter',[FrontController::class,'fillterpage']);
+Route::get('/filltercategory/{category_name}',[FrontController::class,'filltercategory']);
+Route::get('/search', [FrontController::class, 'getsearch']);
+Route::get('/search', [FrontController::class, 'search'])->name('search');
 
 //  end display to front page
 
@@ -55,6 +59,8 @@ Route::get('auth/google', [GoogleController::class, 'googlepage'])->name('login-
 Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
 Route::get('auth/facebook', [FacebookController::class, 'facebookpage'])->name('login-facebook');
 Route::get('auth/facebook/callback', [FacebookController::class, 'facebooklogin']);
+
+
 
 
 Route::middleware(['auth:sanctum'])->group(function () {
@@ -113,6 +119,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     // Booking
     Route::get('/booking',[BookingController::class,'booking']);
     Route::post('/details',[BookingController::class,'createbooing'])->name('details');
+    Route::get('/booking',[BookingController::class,'getdatabooking']);
+
 
 });
 

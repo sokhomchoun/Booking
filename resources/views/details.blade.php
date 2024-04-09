@@ -43,36 +43,11 @@
         </div>
         <div thumbsSlider="" class="swiper mySwiper03">
           <div class="swiper-wrapper">
+            @foreach($viewroom as $viewrooms)
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              <img src="{{ asset('uploads/photos/'.$viewrooms->type_image) }}">
             </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-            </div>
+            @endforeach
           </div>
       </div>
        </div>
@@ -119,10 +94,10 @@
           </div>
           <div class="input-data">
             <label for="roomtype">Room Type</label> <br>
-            <select name="bed" id="room_type" required>
+            <select name="bed"  required>
               <option value=""> Select type of roomtype</option>
               @foreach($viewroom as $items)
-                <option value="{{ $items->bed }}" name="bed">{{ $items->bed }} Bed</option>
+                <option value="{{ $items->bed }}" name="bed" id="SelectRoomtype">{{ $items->bed }} Bed ${{ $items->price }}</span></option>
               @endforeach
             </select>
           </div>
@@ -148,8 +123,8 @@
             <input type="text" name="guest" id="guests" placeholder="Enter amount of people" required>
           </div>
           <div class="input-data">
-            <label for="payment">Payment</label> <br>
-            <input type="text" name="payment" value="20 $" id="payment" disabled>
+            <label for="payment">Payment ($)</label> <br>
+            <input type="text" name="payment" id="payment" placeholder="Payment ($)">
           </div>
           <div class="btn-booking">
             <input type="submit" value="Booking Now">
@@ -158,4 +133,7 @@
 
       </div>
     </section>
+
+    <script src="{{ asset('js/dashboard/ajax.js')}}"></script>
+
 @endsection

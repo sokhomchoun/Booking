@@ -8,23 +8,21 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
 </head>
 <body>
-    {{-- <div class="menu">
-        <a href="{{route('home')}}">Home Page</a>
-        <a href="{{route('login')}}">Login</a>
-    </div> --}}
-    <div class="header-login">
-        <h1>Create Account</h1>
-    </div>
+
+
+    <div class="form__login">
+
     <form action="{{route('createAccount')}}" method="POST" class="form-register" enctype="multipart/form-data">
         @csrf
         @method('post')
+        <h1 class="txt__login">Register</h1>
         <div class="form-register-01">
             <label for="firstname">Firstname</label>
-            <input autocomplete="off" type="text" id="firstname" name="firstname"/>
+            <input class="txt__email" autocomplete="off" type="text" id="firstname" name="firstname"/>
         </div>
         <div class="form-register-01">
             <label for="lastname">Lastname</label>
-            <input autocomplete="off" type="text" id="lastname" name="lastname" />
+            <input class="txt__email" autocomplete="off" type="text" id="lastname" name="lastname" />
         </div>
         <div class="form-register-01">
             <label for="sex">Sex :</label>
@@ -36,33 +34,31 @@
         </div>
         <div class="form-register-01">
             <label for="age">Age</label>
-            <input autocomplete="off" type="text" id="age" name="age" />
-        </div>
-        <div class="form-register-01">
-            <label for="username">Username</label>
-            <input autocomplete="off" type="text" id="username" name="username" />
+            <input class="txt__email" autocomplete="off" type="text" id="age" name="age" />
         </div>
         <div class="form-register-01">
             <label for="email">Email</label>
-            <input autocomplete="off" type="text" id="email" name="email" />
+            <input class="txt__email" autocomplete="off" type="text" id="email" name="email" />
         </div>
         <div class="form-register-01">
             <label for="password">Password</label>
-            <div class="form-register-02">
-                <input type="password" id="password" name="password" />
+            <div class="form-register-02" style="width: 100%">
+                <input class="txt__password"  type="password" id="password" name="password" />
                 <input autocomplete="off" type="checkbox" id="checkPassword"/>
             </div>
         </div>
         <div class="form-register-01">
             <label for="confirm_password">Confirm Password</label>
-            <div class="form-register-02">
-                <input type="password" id="confirm_password" name="confirm_password" />
+            <div class="form-register-02" style="width: 100%">
+                <input class="txt__password" type="password" id="confirm_password" name="confirm_password" />
                 <input autocomplete="off" type="checkbox"  id="checkConfirmPassword"/>
             </div>
         </div>
         <button class="btn-save" type="submit">Register</button>
         
     </form>
+
+    </div>
     
 
     <script src="{{asset('js/main.js')}}"></script>

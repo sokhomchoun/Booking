@@ -387,33 +387,36 @@
         <div class="swiper-container">
           <div class="box mySwiper">
             <div class="content swiper-wrapper">  
-              
+
+              @foreach ($getresort as $getresorts)
               <div class="items swiper-slide">
-              <div class="items-content">
-                  <div class="image">
-                    <img  src="{{asset('img/kep.jpeg')}}"/>
-                  </div>
-                  <div class="bottom-content">
-                    <div class="text">
-                      <div class="property-name">
-                        The B Resort
-                      </div>
-                      <div class="rating">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-empty" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                      </div>
-                      <div class="location">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span>Siem Reap</span>
-                      </div>
+                <div class="items-content">
+                    <div class="image">
+                      <img src="{{ asset('uploads/photos/'.$getresorts->image_hotel) }}">
                     </div>
-                    <button class="btn-viewDeal">View Deal</button>
+                    <div class="bottom-content">
+                      <div class="text">
+                        <div class="property-name">
+                          {{ $getresorts->hotel_name }}
+                        </div>
+                        <div class="rating">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                          <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="location">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          <span>{{ $getresorts->province }}</span>
+                        </div>
+                      </div>
+                      <a href="{{ url('selecteddetails/'.$getresorts->id) }}"><button class="btn-viewDeal">View Deal</button></a>
+                    </div>
                   </div>
-                </div>
-              </div> 
+                </div> 
+              @endforeach
+
               
               
 
@@ -1012,30 +1015,40 @@
           <div class="box mySwiper">
             <div class="content swiper-wrapper">        
               <div class="items swiper-slide">
-              <div class="items-content">
-                  <div class="image">
-                    <img  src="{{asset('img/kep.jpeg')}}"/>
-                  </div>
-                  <div class="bottom-content">
-                    <div class="text">
-                      <div class="property-name">
-                        The B Resort
-                      </div>
-                      <div class="rating">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-empty" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                      </div>
-                      <div class="location">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span>Siem Reap</span>
-                      </div>
+
+                @foreach ($getholidayhome as $getholidayhomes)
+                
+                  <div class="items-content">
+                    <div class="image">
+                      <img src="{{ asset('uploads/photos/'.$getholidayhomes->image_hotel) }}">
                     </div>
-                    <button class="btn-viewDeal">View Deal</button>
+                    <div class="bottom-content">
+                      <div class="text">
+                        <div class="property-name">
+                          {{ $getholidayhomes->hotel_name }}
+                        </div>
+                        <div class="rating">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                          <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="location">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          <span>{{ $getholidayhomes->province }}</span>
+                        </div>
+                      </div>
+                      <a href="{{ url('selecteddetails/'.$getholidayhomes->id) }}"><button class="btn-viewDeal">View Deal</button></a>
+                    </div>
                   </div>
-                </div>
+                @endforeach
+
+
+
+
+
+
               </div>          
               <div class="items swiper-slide">
               <div class="items-content">

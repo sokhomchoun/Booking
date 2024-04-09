@@ -38,88 +38,6 @@
         </button> --}}
       </div>
 
-      <!-- Modal -->
-      {{-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="frm_input_modal">
-          <form action="" method="POST" enctype="multipart/form-data">
-            @csrf
-            <h3 class="header_modal"><span class="icon_save"><i class="bi bi-plus-lg"></i></span>View Booking</h3>
-            <div class="category_header">
-              
-              <div class="mb-3">
-                <label for="" class="form-label">Room No</label>
-                <input type="text" class="form-control" id="clearData" name="room_no">
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Hotel No</label><br>
-                <select name="hotel_no" class="select_province">
-                  <option value="">Selected HotelNo</option>
- 
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Province</label><br>
-                <select name="province" class="select_province">
-                  <option value="">Selected Province</option>
-              
-                </select>
-              </div>    
-              <div class="mb-3">
-                <label for="" class="form-label">Image</label>
-                <input type="file" class="form-control" placeholder="Hotel Name" name="image_room">
-              </div>
-            </div>
-
-            <div class="btn_hotel d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="btn_save"><span class="icon_save"><i class="bi bi-floppy2"></i></span>Save</button>
-              <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><span class="icon_save"><i class="bi bi-trash3"></i></span>Close</button>
-            </div>
-          </form>
-          <div class="modal-dialog">
-          </div>
-        </div>
-       
-      </div> --}}
-
-      {{-- update category  --}}
-
-      {{-- <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="frm_input_modal">
-          <form action="" method="" enctype="multipart/form-data">
-            @csrf
-            <h3 class="header_modal"><span class="icon_save"><i class="bi bi-pencil-square"></i></span>Update Category</h3>
-            <div class="category_header">
-              <div class="mb-3">
-                <label for="" class="form-label">No.</label>
-                <input type="text" class="form-control" id="category_no" name="category_no">
-              </div>
-              <div class="mb-3">
-                <label for="" class="form-label">Name</label>
-                <input type="text" class="form-control" id="category_name" name="category_name">
-              </div>
-
-        
-              <div class="mb-3">
-                <label for="" class="form-label">Image</label>
-                <input type="file" class="form-control" name="category_image">
-                <input type="text" id="category_image" name="category_image" disabled>
-              </div>
-            </div>
-
-            <div class="btn_hotel d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="btn_save"><span class="icon_save"><i class="bi bi-pencil-square"></i></span>Update</button>
-              <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal"><span class="icon_save"><i class="bi bi-trash3"></i></span>Close</button>
-            </div>
-          </form>
-          <div class="modal-dialog">
-          </div>
-        </div>
-       
-      </div> --}}
-
-      {{-- end update category --}}
-
-
         @if (session('status'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
           <strong>{{session('status')}}
@@ -142,7 +60,7 @@
             <thead>
               <tr>
                 <th class="head_table" scope="col">RoomNo.</th>
-                <th class="head_table" scope="col">RoomType</th>
+                <th class="head_table" scope="col">Bed</th>
                 <th class="head_table" scope="col">Guest</th>
                 <th class="head_table" scope="col">Email</th>
                 <th class="head_table" scope="col">Phone Number</th>
@@ -153,7 +71,20 @@
               </tr>
             </thead>  
             <tbody id="search_table">
-             
+              @foreach ($booking as $item)
+              <tr>
+                <td>{{ $item->room_no }}</td>
+                <td>{{ $item->bed }}</td>
+                <td>{{ $item->guest }}</td>
+                <td>{{ $item->email }}</td>
+                <td>{{ $item->phone_number }}</td>
+                <td>{{ $item->check_in_date }}</td>
+                <td>{{ $item->check_out_date }}</td>
+                <td>{{ $item->payment }}</td>
+                <td>{{ $item->status }}</td>
+              </tr>
+              @endforeach
+
             </tbody>
           </table>
       </main><!-- End #main -->     
@@ -170,14 +101,6 @@
       <script src="{{ asset('vendor/php-email-form/validate.js"') }}"></script>
       <script src="{{ asset('js/dashboard/ajax.js')}}"></script>
       <script src="{{ asset('js/dashboard/second.js')}}"></script>
-
-      
-      <script>
-
-        
-      </script>
-
-
     
 </body>
 </html>

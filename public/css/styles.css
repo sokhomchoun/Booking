@@ -544,6 +544,12 @@ nav .nav-bar .logo a{
 /* Responsive */
 
 @media screen and (max-width: 1024px) {
+  .image__item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+  }
   nav .nav-bar .sidebarOpen{
     display: block;
   }
@@ -623,6 +629,12 @@ nav.active .nav-bar .navLogo a{
 }
 
 @media screen and (max-width: 768px){
+  .image__item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+  }
 .btn-container > button {
   width: 36px;
   height: 36px;
@@ -696,3 +708,28 @@ nav.active .nav-bar .navLogo a{
     left: -1rem !important;
   }
 }
+
+@media screen and (max-width: 520px){
+  .image__item{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+  }
+}
+
+.image__item{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
+}
+.txt__category{
+  color: #00728b;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
+

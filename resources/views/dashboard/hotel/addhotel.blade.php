@@ -131,7 +131,6 @@
                 <th class="head_table" scope="col">Category</th>
                 <th class="head_table" scope="col">Description</th>
                 <th class="head_table" scope="col">Price ($)</th>
-                <th class="head_table" scope="col">Type No</th>
                 <th class="head_table" scope="col">Action</th>
               </tr>
             </thead>  
@@ -145,8 +144,7 @@
                 <td>{{$item->category}}</td>
                 <td>{{$item->description}}</td>
                 <td>{{$item->price}}</td>
-                <td>{{$item->roomtype}}</td>
-                
+
                 <td>
                   <a href="{{ url('/edithotel/'.$item->id) }}" class="btn btn-success btn-sm" id="edit_btn"><span class="icon_save"><i class="bi bi-pencil-square"></i></span>Edit</a>
                   <a href="{{ url('/deletehotel/'.$item->id) }}" class="btn btn-danger btn-sm"><span class="icon_save"><i class="bi bi-trash3"></i></span>Delete</a>

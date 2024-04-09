@@ -35,7 +35,7 @@
 
             <ul class="nav-links">
                 @foreach ($category as $item)
-                    <li><a href="#">{{ $item->category_name }}</a></li>
+                    <li><a href="{{ url('filltercategory/'.$item->category_name) }}">{{ $item->category_name }}</a></li>
                 @endforeach
             </ul>
         </div>
@@ -46,9 +46,12 @@
                 <i class='bi bi-search search'></i>
             </div>
 
-            <div class="search-field">
-                <input type="text" placeholder="Search...">
-                <i class='bi bi-search'></i>
+            <div class="search-field" style="background: white; padding-bottom:19px;">
+                <form action="{{ route('search') }}" method="GET">
+                    <input type="text" name="query" id="searchInput" placeholder="Search...">
+                    <i class='bi bi-search' style="margin-top: -4px"></i>
+                </form>
+
             </div>
         </div>
         @if (Auth::check())

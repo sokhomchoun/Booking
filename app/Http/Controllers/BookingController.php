@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
+use Illuminate\Support\Facades\DB;
 
 class BookingController extends Controller
 {
@@ -28,4 +29,8 @@ class BookingController extends Controller
         return redirect()->back()->with('status','You booking successfully');
     }
     
+    public function getdatabooking(){
+        $booking = DB::table('booking')->get();
+        return view('dashboard.booking.booking',['booking' => $booking]);
+    }
 }
