@@ -14,11 +14,11 @@ return new class extends Migration
         DB::statement("
         CREATE VIEW viewrooms AS (
             select rm.province,rm.image_room,rt.room_no,rt.hotel_no,rt.bed,rt.price,rt.type_image,rt.capacity,rt.description from roomtype rt
-            INNER JOIN room rm on rm.hotel_no = rt.hotel_no
+            INNER JOIN room rm on rm.room_no = rt.room_no
          )
       ");
     }
-    
+
   
     /**
      * Reverse the migrations.
