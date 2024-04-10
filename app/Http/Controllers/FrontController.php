@@ -105,7 +105,7 @@ class FrontController extends Controller
     public function search(Request $request){
         $category = DB::table('category')->get();
         $query = $request->input('query');
-        $results = Hotel::where('hotel_name', 'like', '%' . $query . '%')->get();
+        $results = Hotel::where('hotel_name', 'like', '%' . $query . '%')->orWhere('province', 'like', '%' . $query . '%')->get();
         return view('search',  ['results' => $results],compact('category'));
     }
 
