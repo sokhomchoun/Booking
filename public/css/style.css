@@ -21,10 +21,13 @@
     gap: 1rem;
     background-color: #06060626;
     color: #fff;
-    width: 30%;
+    /* width: 30%; */
     padding: 3rem;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 555px;
 }
 .form-register-01{
     display: flex;
@@ -92,4 +95,20 @@ table, th, td {
     text-align: center;
 }
 
+@media(max-width:620px){
+    .form-register {
+        width: 400px !important;
+    }
+    .txt__password {
+        width: 91%;
+    }
+}
+@media (max-width: 420px){
+    .form-register {
+        width: 330px !important;
+    }
+    .txt__password {
+        width: 88%;
+    }
+}
  
