@@ -41,7 +41,7 @@
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Province</label>
-                <input type="text" class="form-control" id="clearName" name="category_name" value="{{$item->province}}">
+                <input type="text" class="form-control" id="clearName" name="province" value="{{$item->province}}">
               </div>
     
               <div class="mb-3">

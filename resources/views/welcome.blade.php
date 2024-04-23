@@ -7,10 +7,10 @@
       <!-- ********* Slide Section Start ******** -->
       <section class="slide-container">
         <div class="container-fluid img-wrapper">
-          <img src="{{asset('img/home_slide1.jpeg')}}" class="active" />
-          <img  src="{{asset('img/kep.jpeg')}}"/>
-          <img  src="{{asset('img/kohkong-province.jpeg')}}"/>
-          <img  src="{{asset('img/kep.jpeg')}}" alt="Kep province"/ >
+          <img src="{{asset('img/hotel.jpeg')}}" class="active" />
+          <img  src="{{asset('img/guesthouse.png')}}"/>
+          <img  src="{{asset('img/resort.png')}}"/>
+          <img  src="{{asset('img/holidayhome.png')}}" alt="Kep province"/ >
         </div>
         <div class="btn-container">
           <button class="prev"><i class="fa fa-angle-left"></i></button>

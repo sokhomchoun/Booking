@@ -59,10 +59,10 @@
                 <label for="" class="form-label">Price</label>
                 <input type="text" class="form-control" id="clearName" name="price" value="{{$item->price}}">
               </div>
-              <div class="mb-3">
+              {{-- <div class="mb-3">
                 <label for="" class="form-label">Room Type</label>
                 <input type="text" class="form-control" id="clearName" name="roomtype" value="{{$item->roomtype}}">
-              </div>
+              </div> --}}
     
               <div class="mb-3">
                 <label for="" class="form-label">Image</label>

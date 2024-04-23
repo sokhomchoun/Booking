@@ -47,7 +47,7 @@
             <div class="category_header">
               
               <div class="mb-3">
-                <label for="" class="form-label">Hotel</label>
+                <label for="" class="form-label">Name</label>
                 <input type="text" class="form-control" id="clearData" name="hotel_name">
               </div>
               <div class="mb-3">
@@ -126,7 +126,7 @@
               <tr>
                 <th class="head_table" scope="col">No.</th>
                 <th class="head_table" scope="col">Image</th>
-                <th class="head_table" scope="col">Hotel</th>
+                <th class="head_table" scope="col">Name</th>
                 <th class="head_table" scope="col">Province</th>
                 <th class="head_table" scope="col">Category</th>
                 <th class="head_table" scope="col">Description</th>

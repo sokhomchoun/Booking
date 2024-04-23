@@ -4,7 +4,10 @@
 @section('content')
     <section class="detail-heading">
        <div class="container">
-        <h1 class="property-name">The B Resort</h1>
+        @foreach ($viewroom as $items)
+        <h1 class="property-name">{{ $items->province }}</h1>
+        @endforeach
+       
         <div class="rating">
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>

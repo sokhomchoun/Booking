@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard/boostrap5.css')}}">
     <link rel="stylesheet" href="{{ asset('css/dashboard/font-awesome.css')}}">
 
-    <title>AddedCategory</title>
+    <title>AddedProvince</title>
 </head>
 <body>
 
@@ -142,7 +142,7 @@
       <script src="{{ asset('js/dashboard/second.js')}}"></script>
 
       
-      {{-- <script>
+      <script>
         $('#searchPro').on('keyup', function(){
           var query = $(this).val();
           $.ajax({
@@ -170,7 +170,7 @@
             }
           });
         });
-      </script> --}}
+      </script>
 
 
     
