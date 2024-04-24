@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard/boostrap5.css')}}">
     <link rel="stylesheet" href="{{ asset('css/dashboard/font-awesome.css')}}">
 
-    <title>AddedCategory</title>
+    <title>AddedCategories</title>
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 
      <main id="main" class="main">
       <div class="d-flex justify-content-between mb-3">
-        <h3 id="add_cate"><span class="icon_save"><i class="bi bi-house-add"></i></span>Cagotegy</h3>
+        <h3 id="add_cate"><span class="icon_save"><i class="bi bi-house-add"></i></span>Cagoteries</h3>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="add_category">
           <i class="bi bi-plus-lg"></i>
           ADD

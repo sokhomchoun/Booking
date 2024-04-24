@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{asset('css/dashboard/boostrap5.css')}}">
     <link rel="stylesheet" href="{{asset('css/dashboard/font-awesome.css')}}">
 
-    <title>EditCategory</title>
+    <title>EditCategories</title>
 </head>
 <body>
 
@@ -30,7 +30,7 @@
     {{-- end menu  --}}
 
      <main id="main" class="main">
-        <h3 id="add_cate" class="mb-3"><span class="icon_save"><i class="bi bi-house-add"></i></span>Cagotegy</h3>
+        <h3 id="add_cate" class="mb-3"><span class="icon_save"><i class="bi bi-house-add"></i></span>Cagoteries</h3>
           <form action="{{url('updatecat/'.$item->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')

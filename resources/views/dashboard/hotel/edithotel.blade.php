@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{asset('css/dashboard/boostrap5.css')}}">
     <link rel="stylesheet" href="{{asset('css/dashboard/font-awesome.css')}}">
 
-    <title>EditHotel</title>
+    <title>EditProperties</title>
 </head>
 <body>
 
@@ -30,7 +30,7 @@
     {{-- end menu  --}}
 
      <main id="main" class="main">
-        <h3 id="add_cate" class="mb-3"><span class="icon_save"><i class="bi bi-house-add"></i></span>Hotel</h3>
+        <h3 id="add_cate" class="mb-3"><span class="icon_save"><i class="bi bi-house-add"></i></span>Properties</h3>
           <form action="{{ url('/updatehotel/'.$item->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
@@ -40,7 +40,7 @@
                 <input type="text" class="form-control" id="clearId" name="id" value="{{$item->id}}" disabled>
               </div>
               <div class="mb-3">
-                <label for="" class="form-label">Hotel</label>
+                <label for="" class="form-label">Name</label>
                 <input type="text" class="form-control" id="clearName" name="hotel_name" value="{{$item->hotel_name}}">
               </div>
               <div class="mb-3">

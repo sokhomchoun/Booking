@@ -37,6 +37,10 @@
             <input class="txt__email" autocomplete="off" type="text" id="age" name="age" />
         </div>
         <div class="form-register-01">
+            <label for="age">Username</label>
+            <input class="txt__email" autocomplete="off" type="text" id="age" name="username" />
+        </div>
+        <div class="form-register-01">
             <label for="email">Email</label>
             <input class="txt__email" autocomplete="off" type="text" id="email" name="email" />
         </div>

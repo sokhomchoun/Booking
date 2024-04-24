@@ -29,7 +29,7 @@
     <section class="trending-destinations">
       <div class="container">
         <div class="heading">
-          <h1>Trending Destenations</h1>
+          <h1>Trending Destinations</h1>
           <p>Travellers searching for Cambodia also booked these</p>
         </div>
         <div class="trending-container">
@@ -80,6 +80,7 @@
       <div class="container">
         <div class="heading">
           <h1>Popular Properties</h1>
+          <p>These popular destinations have a lot to offer</p>
         </div>
         <div class="swiper-container">
           <div class="box mySwiper">

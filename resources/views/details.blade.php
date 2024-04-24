@@ -4,8 +4,10 @@
 @section('content')
     <section class="detail-heading">
        <div class="container">
-        @foreach ($viewroom as $items)
-        <h1 class="property-name">{{ $items->province }}</h1>
+        @foreach ($viewroom as $items => $provider)
+          @if($items == 0)
+              <h1 class="property-name">{{ $provider->province }}</h1>
+          @endif
         @endforeach
        
         <div class="rating">
@@ -25,7 +27,7 @@
             <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:0969913197" target="_blank"> +855 96 9913 197</a>
           </div>
           <div class="mail">
-            <i class="fa fa-envelope" aria-hidden="true"></i><a href="http://rankakada10@gmail.com" target="_blank"> rankakada10@gmail.com</a>
+            <i class="fa fa-envelope" aria-hidden="true"></i><a href="http://rankakada10@gmail.com" target="_blank"> example@gmail.com</a>
           </div>
         </div>
        </div>
@@ -58,12 +60,12 @@
     <section class="details">
       <div class="container">
         <div class="contents">
-          You're eligible for a Genius discount at The B Resort! To save at this property, all you have to do is <br>
+          You're eligible for a Genius discount at The B! To save at this property, all you have to do is <br>
           <a href="">Sign in.</a> <br><br>
-          Located in Kampot, 2.4 km from Kampot Pagoda, The B Resort features views of the garden. Providing a restaurant, the property also has a garden, as well as an indoor pool. The accommodation provides a 24-hour front desk, airport transfers, room service and free WiFi. 
+          Located in , 2.4 km from  Pagoda, The B features views of the garden. Providing a restaurant, the property also has a garden, as well as an indoor pool. The accommodation provides a 24-hour front desk, airport transfers, room service and free WiFi. 
           <br><br>The resort will provide guests with air-conditioned rooms offering a desk, a kettle, a fridge, a minibar, a safety deposit box, a flat-screen TV, a terrace and a private bathroom with a bidet. The B Resort features certain rooms with city views, and the rooms have a balcony. 
           <br><br>At the accommodation each room includes bed linen and towels. You can play billiards at this 3-star resort, and the area is popular for cycling. 
-          <br><br>Kampot Provincial Museum is 2 km from The B Resort, while Kampot Train Station is 3.1 km away. The nearest airport is Sihanouk International Airport, 81 km from the resort.
+          <br><br> Provincial Museum is 2 km from The B Resort, while  Train Station is 3.1 km away. The nearest airport is Sihanouk International Airport, 81 km from the resort.
         </div>
         <div class="highlight">
           <h4>Property highlights</h4>

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{asset('css/dashboard/boostrap5.css')}}">
     <link rel="stylesheet" href="{{asset('css/dashboard/font-awesome.css')}}">
 
-    <title>EditCategory</title>
+    <title>EditLocation</title>
 </head>
 <body>
 
@@ -30,7 +30,7 @@
     {{-- end menu  --}}
 
      <main id="main" class="main">
-        <h3 id="add_cate" class="mb-3"><span class="icon_save"><i class="bi bi-house-add"></i></span>Province</h3>
+        <h3 id="add_cate" class="mb-3"><span class="icon_save"><i class="bi bi-house-add"></i></span>Locations</h3>
           <form action="{{url('updatepro/'.$item->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
