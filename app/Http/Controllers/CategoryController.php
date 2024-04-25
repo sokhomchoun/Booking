@@ -54,7 +54,6 @@ class CategoryController extends Controller
     }
 
     public function updatecate(Request $request,$id){
-
         $up = Category::findOrFail($id);
         $up->category_no = $request->input('category_no');
         $up->category_name = $request->input('category_name');

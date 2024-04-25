@@ -31,7 +31,7 @@
 
      <main id="main" class="main">
         <h3 id="add_cate" class="mb-3"><span class="icon_save"><i class="bi bi-house-add"></i></span>Cagoteries</h3>
-          <form action="{{url('updatecat/'.$item->id)}}" method="POST" enctype="multipart/form-data">
+          <form action="{{ url('/updatecate/'.$item->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="category_header">
