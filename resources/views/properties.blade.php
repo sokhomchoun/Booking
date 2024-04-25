@@ -1006,7 +1006,7 @@
     <!-- Holyday Home Section Start-->
     <section class="holydayHome-container">
       <div class="container">
-        <h4 class="properties-type">Holyday Home Collection in <span class="province-name">
+        <h4 class="properties-type">Holiday Home Collection in <span class="province-name">
           @foreach ($getprovince as $provider)
           {{ $provider->province }}
          @endforeach
@@ -1014,10 +1014,9 @@
         <div class="swiper-container">
           <div class="box mySwiper">
             <div class="content swiper-wrapper">        
+              @foreach ($getholidayhome as $getholidayhomes)
               <div class="items swiper-slide">
 
-                @foreach ($getholidayhome as $getholidayhomes)
-                
                   <div class="items-content">
                     <div class="image">
                       <img src="{{ asset('uploads/photos/'.$getholidayhomes->image_hotel) }}">
@@ -1042,14 +1041,15 @@
                       <a href="{{ url('selecteddetails/'.$getholidayhomes->id) }}"><button class="btn-viewDeal">View Deal</button></a>
                     </div>
                   </div>
-                @endforeach
+               
 
 
 
 
 
 
-              </div>          
+              </div>      
+              @endforeach    
               <div class="items swiper-slide">
               <div class="items-content">
                   <div class="image">
