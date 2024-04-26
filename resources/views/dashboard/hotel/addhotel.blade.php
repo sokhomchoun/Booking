@@ -113,7 +113,7 @@
         <form action="">
           <div class="input-group mb-3">
               <div class="form-outline" data-mdb-input-init>
-                <input type="search" id="searchCate" class="form-control" placeholder="Search..." />
+                <input type="search" id="searchProperties" class="form-control" placeholder="Search..." />
               </div>
               <button id="search-button" type="button" class="btn btn-primary">
                 <i class="bi bi-search"></i>
@@ -170,7 +170,34 @@
 
       
       <script>
-
+        $('#searchProperties').on('keyup', function(){
+          var query = $(this).val();
+          $.ajax({
+            url:'/searchproperties',
+            method:'GET',
+            data:{query: query},
+            success:function(data){
+              // empty data in table
+              $('#search_table').empty();
+              $.each(data, function(index, item) {
+                    $('#search_table').append(
+                        '<tr>'
+                          +
+                          '<td>' + item.id + '</td>' +
+                          '<td><img src="/uploads/photos/' + item.image_hotel + '" alt="" width="30px"></td>' +
+                          '<td>' + item.hotel_name + '</td>' +
+                          '<td>' + item.province + '</td>' +
+                          '<td>' + item.category + '</td>' +
+                          '<td>' + item.description + '</td>' +
+                          '<td>' + item.price + '</td>' +
+                          '<td><a href="{{ url('editpro/'.$item->id) }}" class="btn btn-success btn-sm" id="edit_btn"><span class="icon_save"><i class="bi bi-pencil-square"></i></span>Edit</a><a href="{{ url('deleteProvince/'.$item->id) }}" class="btn btn-danger btn-sm" id="search_edit"><span class="icon_save"><i class="bi bi-trash3"></i></span>Delete</a></td>'
+                          +
+                        '</tr>'
+                    );
+                });
+            }
+          });
+        });
         
       </script>
 

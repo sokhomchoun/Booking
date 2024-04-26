@@ -98,6 +98,12 @@ class HotelController extends Controller
 
     }
 
+    public function searchproperties(Request $request){
+        $query = $request->input('query');
+        $result = Hotel::where('hotel_name','like','%'.$query.'%')->orWhere('category','like','%'.$query.'%')->get();
+        return response()->json($result);
+    }
+
  
 
 
