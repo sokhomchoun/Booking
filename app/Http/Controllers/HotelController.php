@@ -19,7 +19,7 @@ class HotelController extends Controller
         $province = DB::table('province')->get();
         $category = DB::table('category')->get();
         $room = DB::table('room')->get();
-        $hotel = DB::table('hotel')->get();
+        $hotel = DB::table('hotel')->orderBy('id','DESC')->get();
         return view('dashboard.hotel.addhotel',[
             'province' => $province,
             'category' => $category,
