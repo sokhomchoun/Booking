@@ -42,9 +42,9 @@ class FrontController extends Controller
     public function selectedProvince($province){
         $category = DB::table('category')->get();
         $getproperties = Hotel::where('province',$province)->where('category','hotel')->orderBy('id','DESC')->get();
-        $getguesthouse = Hotel::where('province',$province)->where('category','guesthouse')->get();
-        $getholidayhome= Hotel::where('province',$province)->where('category','holidayhome')->get();
-        $getresort= Hotel::where('province',$province)->where('category','resort')->get();
+        $getguesthouse = Hotel::where('province',$province)->where('category','guesthouse')->orderBy('id','DESC')->get();
+        $getholidayhome= Hotel::where('province',$province)->where('category','holidayhome')->orderBy('id','DESC')->get();
+        $getresort= Hotel::where('province',$province)->where('category','resort')->orderBy('id','DESC')->get();
         $slideproperties = Hotel::where('province',$province)->get();
         $getprovince = Hotel::where('province',$province)->paginate(1);
         return view('properties',
