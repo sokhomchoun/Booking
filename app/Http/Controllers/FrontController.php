@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Hotel;
 use App\Models\Province;
 use App\Models\ViewRoom;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -40,7 +41,7 @@ class FrontController extends Controller
 
     public function selectedProvince($province){
         $category = DB::table('category')->get();
-        $getproperties = Hotel::where('province',$province)->where('category','hotel')->get();
+        $getproperties = Hotel::where('province',$province)->where('category','hotel')->orderBy('id','DESC')->get();
         $getguesthouse = Hotel::where('province',$province)->where('category','guesthouse')->get();
         $getholidayhome= Hotel::where('province',$province)->where('category','holidayhome')->get();
         $getresort= Hotel::where('province',$province)->where('category','resort')->get();
@@ -107,6 +108,21 @@ class FrontController extends Controller
         $query = $request->input('query');
         $results = Hotel::where('hotel_name', 'like', '%' . $query . '%')->orWhere('province', 'like', '%' . $query . '%')->get();
         return view('search',  ['results' => $results],compact('category'));
+    }
+
+
+    public function searchdate(Request $request){
+
+        return "have you selected a date";
+        // $checkInDate = Carbon::createFromFormat('Y-m-d', $request->checkInDate);
+        // $checkOutDate = Carbon::createFromFormat('Y-m-d', $request->checkOutDate);
+
+        // $interval = $checkInDate->diffInDays($checkOutDate);
+        // $pricePerDay = 10;
+
+        // $totalPrice = $interval * $pricePerDay;
+
+        // return response()->json(['totalPrice' => $totalPrice]);
     }
 
 }
