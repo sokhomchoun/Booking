@@ -97,15 +97,29 @@
             <label for="check_out">Check out</label> <br>
             <input type="text" name="check_out_date" id="check_out" required onfocus="(this.type='date')" placeholder="Check out Date">
           </div>
+
+
           <div class="input-data">
             <label for="roomtype">Room Type</label> <br>
             <select name="bed"  required>
               <option value=""> Select type of roomtype</option>
               @foreach($viewroom as $items)
-                <option value="{{ $items->bed }}" name="bed" id="SelectRoomtype">{{ $items->bed }} Bed ${{ $items->price }}</span></option>
+                <option value="{{ $items->bed }}" name="bed" id="">{{ $items->bed }} Bed</option>
               @endforeach
             </select>
           </div>
+
+          <div class="input-data">
+            <label for="roomtype">Price Bed</label> <br>
+            <select>
+              @foreach($viewroom as $itemprice)
+                <option value="{{ $itemprice->price }}" id="SelectRoomtype">${{ $items->price }}, {{ $itemprice->bed }} Bed</option>
+              @endforeach
+            </select>
+
+          </div>
+
+
           <div class="input-data">
             <label for="room">Room Number</label> <br>
             @foreach($viewroom as $index => $items)
@@ -129,7 +143,7 @@
           </div>
           <div class="input-data">
             <label for="payment">Payment ($)</label> <br>
-            <input type="text" name="payment" id="payment" placeholder="Payment ($)">
+            <input type="text" name="payment" id="payment">
           </div>
           <div class="btn-booking">
             <input type="submit" value="Booking Now">
@@ -140,5 +154,47 @@
     </section>
 
     <script src="{{ asset('js/dashboard/ajax.js')}}"></script>
+    <script src="{{ asset('js/dashboard/jquery.js')}}"></script>
+    <script>
+
+      $(document).ready(function(){
+         document.getElementById('check_in').addEventListener('change', updatePrice);
+         document.getElementById('check_out').addEventListener('change', updatePrice);
+         document.getElementById('SelectRoomtype').addEventListener('change', updatePrice);
+         function updatePrice(){
+          var checkInDate = $('#check_in').val();
+          var checkOutDate = $('#check_out').val();
+          var selectprice = $('#SelectRoomtype').val();
+          $.ajax({
+            url:'/searchdate',
+            method:'POST',
+            data:{
+              checkin_date: checkInDate,
+              checkout_date: checkOutDate,
+              room_price: selectprice,
+              // token '{{ csrf_token() }}' for input value frontend to backend 
+              _token: '{{ csrf_token() }}'
+            },
+            success: function(response) {
+              // display value in text 
+              // $('#total_price').text('$' + response.total_price);
+                // Handle successful response (e.g., display price)
+                if(response.total_price > 0){
+                  $('#payment').val(response.total_price);
+                }else{
+                  $('#payment').val(0);
+                }
+                //display value in text box
+                // $('#payment').val(response.total_price);
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+
+          })
+         }
+      })
+
+    </script>
 
 @endsection

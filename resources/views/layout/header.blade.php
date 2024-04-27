@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ asset('img/icon.svg') }}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/details.css')}}"/>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/bootstrap-icon.css')}}"/>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/log-off.css' rel='stylesheet'>
+    
     <title>@yield('title')</title>
 </head>
 <body>

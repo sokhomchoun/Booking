@@ -112,17 +112,14 @@ class FrontController extends Controller
 
 
     public function searchdate(Request $request){
+        $checkInDate = strtotime($request->checkin_date);
+        $checkOutDate = strtotime($request->checkout_date);
 
-        return "have you selected a date";
-        // $checkInDate = Carbon::createFromFormat('Y-m-d', $request->checkInDate);
-        // $checkOutDate = Carbon::createFromFormat('Y-m-d', $request->checkOutDate);
+        $numberOfNights = ($checkOutDate - $checkInDate) / (60 * 60 * 24); // Calculate number of nights
+        $selectedRoomPrice = $request->room_price;
+        $totalPrice = $numberOfNights * $selectedRoomPrice; // Total price based on room price and duration of stay
 
-        // $interval = $checkInDate->diffInDays($checkOutDate);
-        // $pricePerDay = 10;
-
-        // $totalPrice = $interval * $pricePerDay;
-
-        // return response()->json(['totalPrice' => $totalPrice]);
+        return response()->json(['total_price' => $totalPrice]);
     }
 
 }

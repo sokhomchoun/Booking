@@ -45,7 +45,7 @@ Route::get('/filltercategory/{category_name}',[FrontController::class,'fillterca
 Route::get('/search', [FrontController::class, 'getsearch']);
 Route::get('/search', [FrontController::class, 'search'])->name('search');
 
-Route::post('/searchdate',[FrontController::class,'searchdate']);
+
 
 //  end display to front page
 
@@ -123,6 +123,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/booking',[BookingController::class,'booking']);
     Route::post('/details',[BookingController::class,'createbooing'])->name('details');
     Route::get('/booking',[BookingController::class,'getdatabooking']);
+
+
+    Route::post('/searchdate',[FrontController::class,'searchdate']);
 
 
 });
