@@ -1,7 +1,7 @@
  <!-- ======= Footer ======= -->
  <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>Booking</span></strong>. All Rights Reserved
+   Copyright © 2024 Booking4U. All rights reserved.
     </div>
 
   </footer><!-- End Footer --> 
